@@ -1,17 +1,25 @@
 <odoo>
     <!-- Inherit the base certification report view -->
     <template id="certification_report_view" inherit_id="survey.certification_report_view">
-        <!-- Check if layout is firenor_v1 and call the custom template -->
-        <xpath expr="//t[@t-call='survey.certification_report_view_general']" position="before">
-            <t t-if="layout_template == 'firenor_v1'">
-                <t t-call="fn_academy.certification_report_view_firenor_v1"/>
-            </t>
-        </xpath>
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="user_input">
 
-        <!-- Modify the logic for layout_template and layout_color -->
-        <xpath expr="//t[@t-set='layout_values']" position="attributes">
-            <attribute name="t-if">user_input.survey_id.certification_report_layout != 'firenor_v1'</attribute>
-        </xpath>
+                <!-- If the layout is 'firenor_v1', use the custom Firenor template -->
+                <t t-if="user_input.survey_id.certification_report_layout == 'firenor_v1'">
+                    <t t-call="fn_academy.certification_report_view_firenor_v1"/>
+                </t>
+
+                <!-- If the layout is NOT 'firenor_v1', use the default logic with fallback for layout_values -->
+                <t t-else="">
+                    <!-- Ensure we set default values for layout_template and layout_color if needed -->
+                    <t t-set="layout_values" t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout and '_' in user_input.survey_id.certification_report_layout else ['modern', 'purple']"/>
+                    <t t-set="layout_template" t-value="layout_values[0]"/>
+                    <t t-set="layout_color" t-value="layout_values[1] if len(layout_values) > 1 else 'purple'"/>
+                    <t t-call="survey.certification_report_view_general"/>
+                </t>
+
+            </t>
+        </t>
     </template>
 
     <!-- Custom template for Firenor V1 layout -->
