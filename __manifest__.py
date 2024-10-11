@@ -31,7 +31,7 @@
     'application': True,
 
     'web.report_assets_common': [
-        'survey/static/src/scss/survey_reports_custom.scss',
+        'fn_academy/static/src/scss/survey_reports_custom.scss',
     ],
 
 }
