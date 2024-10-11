@@ -7,7 +7,7 @@
                 <!-- If the layout is 'firenor_v1', use the custom Firenor template -->
                 <t t-if="user_input.survey_id.certification_report_layout == 'firenor_v1'">
                     <t t-set="layout_template" t-value="modern"/>
-                    <t t-set="layout_color" t-value="#47a5ae"/>
+                    <t t-set="layout_color" t-value="'#47a5ae'"/>
                     <t t-call="survey.certification_report_view_general"/>
                 </t>
 
