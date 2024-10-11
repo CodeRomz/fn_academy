@@ -7,7 +7,7 @@
                 <!-- If the layout is 'firenor_v1', use the custom Firenor template -->
                 <t t-if="user_input.survey_id.certification_report_layout == 'firenor_v1'">
                     <t t-set="layout_template" t-value="'modern'"/>
-                    <t t-set="layout_color" t-value="'purple'"/>
+                    <t t-set="layout_color" t-value="'#47a5ae'"/>
                     <t t-call="survey.certification_report_view_general"/>
                 </t>
 
@@ -24,21 +24,21 @@
         </t>
     </template>
 
-    <!-- Custom template for Firenor V1 layout -->
-    <template id="certification_report_view_firenor_v1">
-        <t t-call="web.basic_layout">
-            <div class="page article certification-wrapper"
-                t-att-data-oe-model="user_input._name"
-                t-att-data-oe-id="user_input.id"
-                style="padding: 40px; text-align: center;">
+<!--    &lt;!&ndash; Custom template for Firenor V1 layout &ndash;&gt;-->
+<!--    <template id="certification_report_view_firenor_v1">-->
+<!--        <t t-call="web.basic_layout">-->
+<!--            <div class="page article certification-wrapper"-->
+<!--                t-att-data-oe-model="user_input._name"-->
+<!--                t-att-data-oe-id="user_input.id"-->
+<!--                style="padding: 40px; text-align: center;">-->
 
-                <h1 style="font-size: 48px; color: #47a5ae;">Firenor Certification</h1>
-                <p>Congratulations <t t-esc="user_input.partner_id.name"/>!</p>
-                <p>You have successfully completed the survey:</p>
-                <h3>"<t t-esc="user_input.survey_id.title"/>."</h3>
-                <p>Date of Certification: <t t-esc="user_input.create_date"/></p>
-                <p>Issued by Firenor UAE.</p>
-            </div>
-        </t>
-    </template>
-</odoo>
+<!--                <h1 style="font-size: 48px; color: #47a5ae;">Firenor Certification</h1>-->
+<!--                <p>Congratulations <t t-esc="user_input.partner_id.name"/>!</p>-->
+<!--                <p>You have successfully completed the survey:</p>-->
+<!--                <h3>"<t t-esc="user_input.survey_id.title"/>."</h3>-->
+<!--                <p>Date of Certification: <t t-esc="user_input.create_date"/></p>-->
+<!--                <p>Issued by Firenor UAE.</p>-->
+<!--            </div>-->
+<!--        </t>-->
+<!--    </template>-->
+<!--</odoo>-->
