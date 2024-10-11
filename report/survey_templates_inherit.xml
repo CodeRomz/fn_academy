@@ -1,5 +1,5 @@
 <odoo>
-    <!-- Inherit the existing certification_report_view template from the survey module -->
+    <!-- Inherit the existing certification report view template from the survey module -->
     <template id="certification_report_view" inherit_id="survey.certification_report_view">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="user_input">
@@ -10,7 +10,7 @@
                 </t>
 
                 <!-- If the layout is NOT 'firenor_v1', fall back on the default logic -->
-                <t t-if="user_input.survey_id.certification_report_layout != 'firenor_v1'">
+                <t t-else="">
                     <t t-set="layout_values" t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['modern', 'purple']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
                     <t t-set="layout_color" t-value="layout_values[1]"/>
@@ -24,7 +24,11 @@
     <!-- Define the custom template for Firenor V1 layout -->
     <template id="certification_report_view_firenor_v1">
         <t t-call="web.basic_layout">
-            <div class="page" style="padding: 40px; text-align: center;">
+            <div class="page article certification-wrapper"
+                t-att-data-oe-model="user_input._name"
+                t-att-data-oe-id="user_input.id"
+                style="padding: 40px; text-align: center;">
+
                 <h1 style="font-size: 48px; color: #FF4500;">Firenor Certification</h1>
                 <p>Congratulations <t t-esc="user_input.partner_id.name"/>!</p>
                 <p>You have successfully completed the survey:</p>
