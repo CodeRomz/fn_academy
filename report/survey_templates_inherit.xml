@@ -11,9 +11,9 @@
 
     <!-- Custom template for Firenor V1 layout -->
     <template id="certification_report_view_firenor_v1">
-        <t t-call="web.external_layout">
+        <t t-call="web.basic_layoutt">
             <div class="page" style="padding: 40px; text-align: center;">
-                <h1 style="font-size: 48px; color: ##47a5ae;">Firenor Certification</h1>
+                <h1 style="font-size: 48px; color: #47a5ae;">Firenor Certification</h1>
                 <p>Congratulations <t t-esc="user_input.partner_id.name"/>!</p>
                 <p>You have successfully completed the survey:</p>
                 <h3>"<t t-esc="user_input.survey_id.title"/>."</h3>
