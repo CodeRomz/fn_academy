@@ -25,5 +25,8 @@
         # 'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'views/templates.xml',
+        'report/survey_templates_inherit.xml',
     ],
+    'installable': True,
+    'application': True,
 }
