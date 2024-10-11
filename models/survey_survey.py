@@ -6,6 +6,6 @@ class SurveySurvey(models.Model):
     # Extend the certification_report_layout selection field to add 'firenor_v1'
     certification_report_layout = fields.Selection(
         selection_add=[
-            ('firenor_v1', 'Firenor V1')
+            ('modern_seagreen', 'Firenor V1')
         ],
     )

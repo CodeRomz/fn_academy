@@ -1,30 +1,30 @@
 <odoo>
-<!--    &lt;!&ndash; Inherit the base certification report view &ndash;&gt;-->
-<!--    <template id="certification_report_view" inherit_id="survey.certification_report_view">-->
-<!--        <t t-call="web.html_container">-->
-<!--            <t t-foreach="docs" t-as="user_input">-->
+    <!-- Inherit the base certification report view -->
+    <template id="certification_report_view" inherit_id="survey.certification_report_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="user_input">
 
-<!--                &lt;!&ndash; If the layout is 'firenor_v1', use the custom Firenor template &ndash;&gt;-->
-<!--                <t t-if="user_input.survey_id.certification_report_layout == 'firenor_v1'">-->
-<!--                    <t t-set="layout_template" t-value="'classic'"/>-->
-<!--                    <t t-set="layout_color" t-value="'yellow'"/>-->
-<!--                    <t t-call="survey.certification_report_view_general"/>-->
-<!--                </t>-->
+                <!-- If the layout is 'firenor_v1', use the custom Firenor template -->
+                <t t-if="user_input.survey_id.certification_report_layout == 'firenor_v1'">
+                    <t t-set="layout_template" t-value="'classic'"/>
+                    <t t-set="layout_color" t-value="'yellow'"/>
+                    <t t-call="survey.certification_report_view_general"/>
+                </t>
 
-<!--                &lt;!&ndash; If the layout is NOT 'firenor_v1', use the default logic with fallback for layout_values &ndash;&gt;-->
-<!--                <t t-if="user_input.survey_id.certification_report_layout != 'firenor_v1'">-->
-<!--                    &lt;!&ndash; Ensure we set default values for layout_template and layout_color if needed &ndash;&gt;-->
-<!--                    <t t-set="layout_values" t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout and '_' in user_input.survey_id.certification_report_layout else ['modern', 'purple']"/>-->
-<!--                    <t t-set="layout_template" t-value="layout_values[0]"/>-->
-<!--                    <t t-set="layout_color" t-value="layout_values[1] if len(layout_values) > 1 else 'purple'"/>-->
-<!--                    <t t-call="survey.certification_report_view_general"/>-->
-<!--                </t>-->
+                <!-- If the layout is NOT 'firenor_v1', use the default logic with fallback for layout_values -->
+                <t t-if="user_input.survey_id.certification_report_layout != 'firenor_v1'">
+                    <!-- Ensure we set default values for layout_template and layout_color if needed -->
+                    <t t-set="layout_values" t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout and '_' in user_input.survey_id.certification_report_layout else ['modern', 'purple']"/>
+                    <t t-set="layout_template" t-value="layout_values[0]"/>
+                    <t t-set="layout_color" t-value="layout_values[1] if len(layout_values) > 1 else 'purple'"/>
+                    <t t-call="survey.certification_report_view_general"/>
+                </t>
 
-<!--            </t>-->
-<!--        </t>-->
-<!--    </template>-->
+            </t>
+        </t>
+    </template>
 
-<!--    &lt;!&ndash; Custom template for Firenor V1 layout &ndash;&gt;-->
+    <!-- Custom template for Firenor V1 layout -->
 <!--    <template id="certification_report_view_firenor_v1">-->
 <!--        <t t-call="web.basic_layout">-->
 <!--            <div class="page article certification-wrapper"-->
