@@ -7,12 +7,12 @@
                 <!-- If the layout is 'firenor_v1', use the custom Firenor template -->
                 <t t-if="user_input.survey_id.certification_report_layout == 'firenor_v1'">
                     <t t-set="layout_template" t-value="'modern'"/>
-                    <t t-set="layout_color" t-value="'#47a5ae'"/>
+                    <t t-set="layout_color" t-value="'yellow'"/>
                     <t t-call="survey.certification_report_view_general"/>
                 </t>
 
                 <!-- If the layout is NOT 'firenor_v1', use the default logic with fallback for layout_values -->
-                <t t-else="">
+                <t t-if="user_input.survey_id.certification_report_layout != 'firenor_v1'">
                     <!-- Ensure we set default values for layout_template and layout_color if needed -->
                     <t t-set="layout_values" t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout and '_' in user_input.survey_id.certification_report_layout else ['modern', 'purple']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
