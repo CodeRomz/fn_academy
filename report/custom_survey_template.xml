@@ -19,15 +19,15 @@
                             }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
-                            <div class="row my-5 py-5">
-                                <div class="col-12 my-5 py-5">
+                            <div class="row my-1 py-1">
+                                <div class="col-12 my-1 py-1">
                                     <h1 class="my-1 py-1">
                                         Certificate <span t-if="user_input.scoring_success">of Achievement</span>
                                     </h1>
                                 </div>
                             </div>
                             <div class="row mt-1 pt-1">
-                                <div class="col-12  mt-0 pt-0">
+                                <div class="col-12  mt-1 pt-1">
                                     <p class="mt-5 pt-5">This certificate is presented to</p>
                                 </div>
                             </div>
@@ -37,7 +37,6 @@
                                         <t t-esc="user_input.partner_id.name or user_input.email"/>
                                     </h1>
                                 </div>
-
 
                             </div>
                             <div class="row px-5 mx-5 mt-4">
