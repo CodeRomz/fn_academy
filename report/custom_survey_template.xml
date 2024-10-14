@@ -24,17 +24,20 @@
                             border: 1px solid red;
                             text-align: center;
                             }
+                            .border{
+                            border: 1px solid blue;
+                            }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
-                            <div class="row justify-content-md-center">
+                            <div class="row">
                                 <div class="col-12">
                                     <h1>Certificate of Completion</h1>
                                 </div>
                             </div>
-                            <div class="row justify-content-md-center">
+                            <div class="row">
                                 <div class="col-12"><p>This is presetned to:</p></div>
                             </div>
-                            <div class="row justify-content-md-center">
+                            <div class="row">
                                 <div class="col-12">
                                     <h1>
                                         <t t-esc="user_input.partner_id.name or user_input.email"/>
@@ -42,18 +45,18 @@
                                 </div>
 
                             </div>
-                            <div class="row justify-content-md-center">
+                            <div class="row">
                                 <div class="col-12">
                                     <p>successfully completed <t t-esc="user_input.survey_id.display_name"/>.</p>
 
                                 </div>
 
                             </div>
-                            <div class="row justify-content-md-center">
+                            <div class="row">
                                 <div class="col-6">Name 1</div>
                                 <div class="col-6">Name 2</div>
                             </div>
-                            <div class="row justify-content-md-center">
+                            <div class="row">
                                 <div class="col-6">Posistion 1</div>
                                 <div class="col-6">Posistion2</div>
                             </div>
