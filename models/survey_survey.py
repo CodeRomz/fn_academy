@@ -7,5 +7,5 @@ class Survey(models.Model):
     certification_report_layout = fields.Selection(
         selection=lambda self: [('firenorV1_seagreen', 'Firenor V1 Seagreen')],
         string='Certification Template',
-        default='firenor_seagreen'
+        default='firenorV1_seagreen'
     )
