@@ -8,7 +8,7 @@
                     <t t-set="layout_color" t-value="layout_values[1]"/>
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
                          t-att-data-oe-id="user_input.id"
-                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}" style="background-color: #47a5ae !important;">
+                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}" style="background-color: none !important;">
                         <div class="custom-certificate" >
                             <h1>Firenor Seagreen Certificate</h1>
                             <p>
