@@ -22,9 +22,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <h1>
-                                        <b>Certificate</b>
-                                        <br/>
-                                        <span t-if="user_input.scoring_success">of achievement</span>
+                                        Certificate <span t-if="user_input.scoring_success">of achievement</span>
                                     </h1>
                                 </div>
                             </div>
@@ -43,7 +41,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <p>successfully completed <t t-esc="user_input.survey_id.display_name"/>. </p>
+                                    <p t-if="user_input.scoring_success">successfully completed <t t-esc="user_input.survey_id.display_name"/>. </p>
+                                    <p t-else=" ">for taking the <t t-esc="user_input.survey_id.display_name"/> course.</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -56,7 +55,7 @@
                             </div>
                             <div class="row" t-if="user_input.scoring_success">
                                 <div class="col-12">Certification n°
-                                    <span t-out="str('FN')+str(user_input.id).rjust(10, '0')"/>
+                                    <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                 </div>
                             </div>
                         </div>
