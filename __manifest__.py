@@ -22,6 +22,7 @@
         # 'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'report/report.xml',
+        'report/custom_survey_template.xml',
     ],
     'installable': True,
     'application': True,

@@ -1,0 +1,13 @@
+<odoo>
+  <template id="custom_survey_certificate" inherit_id="survey.survey_certification_report">
+    <xpath expr="//div[@class='o_survey_certificate']" position="replace">
+      <div class="custom-certificate">
+        <h1>Firenor Seagreen Certificate</h1>
+        <p>
+          This certifies that <strong><t t-esc="survey_user_input.partner_id.name"/></strong>
+          has successfully completed the <strong><t t-esc="survey_id.title"/></strong> survey.
+        </p>
+      </div>
+    </xpath>
+  </template>
+</odoo>
