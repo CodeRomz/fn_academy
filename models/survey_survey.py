@@ -1,11 +1,11 @@
-from odoo import _, api, fields, models
+from odoo import models, fields
 
-class SurveySurvey(models.Model):
+class Survey(models.Model):
     _inherit = 'survey.survey'
 
-    # Extend the certification_report_layout selection field to add 'firenor_v1'
+    # Override the field with a new method to remove existing selections
     certification_report_layout = fields.Selection(
-        selection=[('firenor_seagreen', 'Firenor Seagreen')],
-        string='Certification template',
+        selection=lambda self: [('firenor_seagreen', 'Firenor Seagreen')],
+        string='Certification Template',
         default='firenor_seagreen'
     )
