@@ -12,7 +12,6 @@
               This certifies that <strong><t t-esc="user_input.partner_id.name or user_input.email"/></strong>
               successfully completed <t t-esc="user_input.survey_id.display_name"/>.
             </p>
-            <p>Date: <t t-field="user_input.create_date" t-options='{"widget": "date"}'/></p>
           </div>
         </t>
       </t>
