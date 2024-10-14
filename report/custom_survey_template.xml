@@ -12,7 +12,6 @@
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
                         <style>
                             .firenorV-One{
-                            text
                             background-color: #ffffff !important;
                             background: url(/fn_academy/static/img/firenorV-One_seagreen.png);
                             background-size: cover;
