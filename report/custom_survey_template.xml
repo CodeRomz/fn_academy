@@ -55,6 +55,8 @@
                                 <div class="col-6">Posistion 1</div>
                                 <div class="col-6">Posistion2</div>
                             </div>
+                            <p>layout_template: <t t-esc="layout_template"/>.</p>
+                            <p>layout_color: <t t-esc="layout_color"/>.</p>
                         </div>
                     </div>
                 </t>
