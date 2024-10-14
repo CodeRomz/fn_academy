@@ -67,11 +67,6 @@
                                     <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                 </div>
                             </div>
-                            <!--<div class="row">
-                                <div class="col-12">
-                                    <br/>
-                                </div>
-                            </div>-->
                         </div>
                     </div>
                 </t>
