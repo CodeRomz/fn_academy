@@ -40,7 +40,7 @@
                                 </div>
 
                             </div>
-                            <div class="row px-5 mx-5 mt-5">
+                            <div class="row px-5 mx-5 mt-4">
                                 <div class="col-12 px-5 my-3">
                                     <p class="mx-5" t-if="user_input.scoring_success">For successfully completing
                                         <em><t t-esc="user_input.survey_id.display_name"/></em>.<br/>Your dedication, perseverance,
