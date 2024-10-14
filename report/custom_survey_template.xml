@@ -11,9 +11,9 @@
                          t-att-data-oe-id="user_input.id"
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
                         <style>
-                            .firenorV-One{
+                            .firenor-one{
                             background-color: #ffffff !important;
-                            background: url(/fn_academy/static/img/firenorV-One_seagreen.png);
+                            background: url(/fn_academy/static/img/firenor-one_seagreen.png);
                             background-size: cover;
                             border: 1px solid red;
                             text-align: center;
@@ -54,8 +54,8 @@
                                 <div class="col-6">Posistion 1</div>
                                 <div class="col-6">Posistion2</div>
                             </div>
-                            <p>layout_template: <t t-esc="layout_template"/>.</p>
-                            <p>layout_color: <t t-esc="layout_color"/>.</p>
+                            <p>layout_template: <t t-esc="layout_template"/></p>
+                            <p>layout_color: <t t-esc="layout_color"/></p>
                         </div>
                     </div>
                 </t>
