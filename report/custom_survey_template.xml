@@ -24,7 +24,7 @@
                             border: 1px solid red;
                             text-align: center;
                             }
-                            .border{
+                            .row{
                             border: 1px solid blue;
                             }
                         </style>
