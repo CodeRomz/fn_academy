@@ -65,11 +65,11 @@
                                 <div class="col-6">Name 1</div>
                                 <div class="col-6">Name 2</div>
                             </div>
-                            <div class="row mb-5 pb-5">
+                            <div class="row mb-1 pb-1">
                                 <div class="col-6">Position 1</div>
                                 <div class="col-6">Position 2</div>
                             </div>
-                            <div class="row my-5 py-5" t-if="user_input.scoring_success">
+                            <div class="row my-1 py-1" t-if="user_input.scoring_success">
                                 <div class="col-12" style="text-align: right !important;">Certification n°
                                     <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                 </div>
