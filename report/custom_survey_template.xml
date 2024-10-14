@@ -40,8 +40,8 @@
                                 </div>
 
                             </div>
-                            <div class="row px-5 mx-5">
-                                <div class="col-12 px-5 mx-5">
+                            <div class="row px-5 mx-5 mt-5">
+                                <div class="col-12 px-5 my-5">
                                     <p class="mx-5" t-if="user_input.scoring_success">For successfully completing
                                         <em><t t-esc="user_input.survey_id.display_name"/></em>.<br/>Your dedication, perseverance,
                                         and hard work have not only earned you this certification but also reflect your
@@ -59,8 +59,8 @@
                                 <div class="col-6">Name 2</div>
                             </div>
                             <div class="row mb-5">
-                                <div class="col-6">Posistion 1</div>
-                                <div class="col-6">Posistion 2</div>
+                                <div class="col-6">Position 1</div>
+                                <div class="col-6">Position 2</div>
                             </div>
                             <div class="row mt-2" t-if="user_input.scoring_success">
                                 <div class="col-12" >Certification n°
