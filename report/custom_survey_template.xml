@@ -17,11 +17,14 @@
                             background-size: cover;
                             text-align: center;
                             }
+                            .fn_font{
+                            font-family: 'Square721BT', sans-serif !important;
+                            }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center' + layout_template + ' ' + layout_color}">
                             <div class="row mt-5 pt-4 mb-2">
                                 <div class="col-12 mt-5 pt-5">
-                                    <h1 class="my-1 py-1">
+                                    <h1 class="fn_font my-1 py-1">
                                         Certificate
                                         <span t-if="user_input.scoring_success">of Achievement</span>
                                     </h1>
@@ -42,7 +45,7 @@
                             </div>
                             <div class="row px-5 mx-5 mt-5">
                                 <div class="col-12 px-5 my-1">
-                                    <p class="mx-2" t-if="user_input.scoring_success">For successfully completing
+                                    <p class="fn_font mx-2" t-if="user_input.scoring_success">For successfully completing
                                         <em>
                                             <t t-esc="user_input.survey_id.display_name"/>
                                         </em>
