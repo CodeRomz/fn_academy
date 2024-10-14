@@ -17,10 +17,12 @@
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
                         <style>
                             .firenor{
+                            text
                             background-color: #ffffff !important;
                             background: url(/fn_academy/static/img/seagreen_certificate_completion.png);
                             background-size: cover;
                             border: 1px solid red;
+                            text-align: center;
                             }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
