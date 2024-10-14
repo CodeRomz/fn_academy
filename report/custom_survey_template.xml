@@ -25,7 +25,7 @@
                             color:red !important;
                             }
                         </style>
-                        <div class="container firenor-seagreen">
+                        <div class="container firenor-seagreen" style="height: 100%; display: flex;">
                             <div class="row">
                                 <div class="col">
                                     <h1>Certificate of Completion</h1>
