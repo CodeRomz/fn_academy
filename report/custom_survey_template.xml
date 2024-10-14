@@ -27,7 +27,7 @@
                                     </h1>
                                 </div>
                             </div>
-                            <div class="row pt-5">
+                            <div class="row pt-4">
                                 <div class="col-12  mt-5">
                                     <p class="mt-5 pt-5">This certificate is presented to</p>
                                 </div>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="row px-5 mb-5">
                                 <div class="col-12 px-5">
-                                    <p class="mx-4" t-if="user_input.scoring_success">For successfully completing
+                                    <p class="mx-5" t-if="user_input.scoring_success">For successfully completing
                                         <em><t t-esc="user_input.survey_id.display_name"/></em>.<br/>Your dedication, perseverance,
                                         and hard work have not only earned you this certification but also reflect your
                                         commitment to excellence. Your efforts have made a meaningful impact, and we are
@@ -50,21 +50,19 @@
                                         ability to rise to challenges and excel, and we look forward to witnessing your
                                         continued success in future endeavors.
                                     </p>
-                                    <p t-else=" ">for taking the
-                                        <t t-esc="user_input.survey_id.display_name"/>
-                                        course.
+                                    <p  class="mx-5" t-else=" ">for taking the <em><t t-esc="user_input.survey_id.display_name"/></em> course.
                                     </p>
                                 </div>
                             </div>
-                            <div class="row my-5">
+                            <div class="row mt-5">
                                 <div class="col-6">Name 1</div>
                                 <div class="col-6">Name 2</div>
                             </div>
-                            <div class="row my-5">
+                            <div class="row mb-5">
                                 <div class="col-6">Posistion 1</div>
-                                <div class="col-6">Posistion2</div>
+                                <div class="col-6">Posistion 2</div>
                             </div>
-                            <div class="row mt-5" t-if="user_input.scoring_success">
+                            <div class="row mt-2" t-if="user_input.scoring_success">
                                 <div class="col-12">Certification n°
                                     <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                 </div>
