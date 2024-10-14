@@ -19,16 +19,16 @@
                             }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
-                            <div class="row pt-4">
-                                <div class="col-12 mt-5">
+                            <div class="row mb-4 py-4">
+                                <div class="col-12 mt-5 py-1">
                                     <h1 class="mt-5 pt-5">
                                         Certificate
                                         <span t-if="user_input.scoring_success">of achievement</span>
                                     </h1>
                                 </div>
                             </div>
-                            <div class="row pt-4">
-                                <div class="col-12  mt-5">
+                            <div class="row mt-4 pt-4">
+                                <div class="col-12  mt-5 pt-0">
                                     <p class="mt-5 pt-5">This certificate is presented to</p>
                                 </div>
                             </div>
