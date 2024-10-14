@@ -41,7 +41,7 @@
                             </div>
                             <div class="row px-5 mx-5 mt-4">
                                 <div class="col-12 px-5 my-2">
-                                    <p class="mx-5" t-if="user_input.scoring_success">For successfully completing
+                                    <p class="mx-4" t-if="user_input.scoring_success">For successfully completing
                                         <em><t t-esc="user_input.survey_id.display_name"/></em>.<br/>Your dedication, perseverance,
                                         and hard work have not only earned you this certification but also reflect your
                                         commitment to excellence. Your efforts have made a meaningful impact, and we are
@@ -49,7 +49,7 @@
                                         ability to rise to challenges and excel, and we look forward to witnessing your
                                         continued success in future endeavors.
                                     </p>
-                                    <p  class="mx-5" t-else=" ">for taking the <em><t t-esc="user_input.survey_id.display_name"/></em> course.
+                                    <p  class="mx-4" t-else=" ">for taking the <em><t t-esc="user_input.survey_id.display_name"/></em> course.
                                     </p>
                                 </div>
                             </div>
