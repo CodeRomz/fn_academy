@@ -1,20 +1,27 @@
 <odoo>
-  <template id="certification_report_view" inherit_id="survey.certification_report_view" priority="20">
-    <xpath expr="." position="replace">
-      <t t-call="web.html_container">
-        <t t-foreach="docs" t-as="user_input">
-          <t t-set="layout_values" t-value="['firenor', 'seagreen']"/>
-          <t t-set="layout_template" t-value="layout_values[0]"/>
-          <t t-set="layout_color" t-value="layout_values[1]"/>
-          <div class="custom-certificate">
-            <h1>Firenor Seagreen Certificate</h1>
-            <p>
-              This certifies that <strong><t t-esc="user_input.partner_id.name or user_input.email"/></strong>
-              successfully completed <t t-esc="user_input.survey_id.display_name"/>.
-            </p>
-          </div>
-        </t>
-      </t>
-    </xpath>
-  </template>
+    <template id="certification_report_view" inherit_id="survey.certification_report_view" priority="20">
+        <xpath expr="." position="replace">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="user_input">
+                    <t t-set="layout_values" t-value="['firenor', 'seagreen']"/>
+                    <t t-set="layout_template" t-value="layout_values[0]"/>
+                    <t t-set="layout_color" t-value="layout_values[1]"/>
+                    <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
+                         t-att-data-oe-id="user_input.id"
+                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
+                        <div class="custom-certificate">
+                            <h1>Firenor Seagreen Certificate</h1>
+                            <p>
+                                This certifies that
+                                <strong>
+                                    <t t-esc="user_input.partner_id.name or user_input.email"/>
+                                </strong>
+                                successfully completed<t t-esc="user_input.survey_id.display_name"/>.
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
 </odoo>
