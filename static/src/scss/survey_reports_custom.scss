@@ -1,13 +1,20 @@
-#o_survey_certification.certification-wrapper {
-    // Your existing styles for certification-wrapper
+.firenor-seagreen {
+    background-color: #2E8B57;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    background: url(/fn_academy/static/img/ceagreen_certificate_completion.png);
+}
 
-    &.seagreen {
-        color: #47a5ae;  // seagreen color for background
-    }
+.firenor-seagreen h1 {
+    color:red;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
 
-    &.firenor {
-        color: #47a5ae;
-
-    }
-
+.firenor-seagreen p {
+    color:red;
+    font-size: 16px;
 }
