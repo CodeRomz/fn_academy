@@ -20,7 +20,7 @@
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
                             <div class="row mt-5 pt-5">
-                                <div class="col-12 my-1 py-1">
+                                <div class="col-12 mt-5 pt-5">
                                     <h1 class="my-1 py-1">
                                         Certificate <span t-if="user_input.scoring_success">of Achievement</span>
                                     </h1>
