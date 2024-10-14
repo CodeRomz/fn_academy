@@ -40,7 +40,7 @@
                                 </div>
 
                             </div>
-                            <div class="row px-5">
+                            <div class="row px-5 mb-5">
                                 <div class="col-12 px-5">
                                     <p class="mx-4" t-if="user_input.scoring_success">For successfully completing
                                         <em><t t-esc="user_input.survey_id.display_name"/></em>.<br/>Your dedication, perseverance,
@@ -56,15 +56,15 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row my-5">
                                 <div class="col-6">Name 1</div>
                                 <div class="col-6">Name 2</div>
                             </div>
-                            <div class="row">
+                            <div class="row my-5">
                                 <div class="col-6">Posistion 1</div>
                                 <div class="col-6">Posistion2</div>
                             </div>
-                            <div class="row" t-if="user_input.scoring_success">
+                            <div class="row mt-5" t-if="user_input.scoring_success">
                                 <div class="col-12">Certification n°
                                     <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                 </div>
