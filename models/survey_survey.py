@@ -5,7 +5,7 @@ class Survey(models.Model):
 
     # Override the field with a new method to remove existing selections
     certification_report_layout = fields.Selection(
-        selection=lambda self: [('firenor_seagreen', 'Firenor Seagreen')],
+        selection=lambda self: [('firenorV1_seagreen', 'Firenor V1 Seagreen')],
         string='Certification Template',
         default='firenor_seagreen'
     )

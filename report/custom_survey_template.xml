@@ -16,7 +16,7 @@
                          t-att-data-oe-id="user_input.id"
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
                         <style>
-                            .firenor{
+                            .firenorV1{
                             text
                             background-color: #ffffff !important;
                             background: url(/fn_academy/static/img/seagreen_certificate_completion.png);
