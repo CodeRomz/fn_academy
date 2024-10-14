@@ -8,16 +8,13 @@
                     <t t-set="layout_color" t-value="layout_values[1]"/>
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
                          t-att-data-oe-id="user_input.id"
-                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}" style="background-color: none !important;">
+                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}" style="background-color: none !important; background: url(/fn_academy/static/img/ceagreen_certificate_completion.png);">
                         <div class="custom-certificate" >
-                            <h1>Firenor Seagreen Certificate</h1>
-                            <p>
-                                This certifies that
-                                <strong>
-                                    <t t-esc="user_input.partner_id.name or user_input.email"/>
-                                </strong>
-                                successfully completed<t t-esc="user_input.survey_id.display_name"/>.
-                            </p>
+                            <h1>Certificate of Completion</h1>
+                            <h6>This is presented to:</h6>
+                            <h2><t t-esc="user_input.partner_id.name or user_input.email"/></h2>
+
+                            <p> successfully completed <t t-esc="user_input.survey_id.display_name"/>.</p>
                         </div>
                     </div>
                 </t>
