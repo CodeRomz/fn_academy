@@ -28,7 +28,11 @@
     'application': True,
 
     'web.report_assets_common': [
-        '/fn_academy/static/src/scss/survey_reports_custom.scss',
+        'fn_academy/static/src/scss/survey_reports_custom.scss',
+    ],
+
+    'web.assets_frontend': [
+        'fn_academy/static/src/scss/survey_reports_custom.scss',
     ],
 
 }
