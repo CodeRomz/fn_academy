@@ -3,37 +3,28 @@
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="user_input">
-                    <t t-set="layout_values" t-value="['firenor', 'seagreen']"/>
+                    <style>
+                        .firenor {
+                        background-color: #ffffff !important;
+                        background: url(/fn_academy/static/img/ceagreen_certificate_completion.png);
+                        background-size: cover;
+                        border: 1px solid red;
+                        }
+                    </style>
+                    <t t-set="layout_values"
+                       t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['firenor', 'seagreen']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
                     <t t-set="layout_color" t-value="layout_values[1]"/>
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
                          t-att-data-oe-id="user_input.id"
-                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}"
-                         style="background-color: #ffffff !important; ">
-                        <style>
-                            .firenor-seagreen {
-                            font-family: "Arial", sans-serif;
-                            background: url(/fn_academy/static/img/ceagreen_certificate_completion.png);
-                            background-size: cover;
-                            }
-
-                            .firenor-seagreen h1 {
-                            color:red !important;
-                            }
-
-                            .firenor-seagreen p {
-                            color:red !important;
-                            }
-                        </style>
-                        <div class="container firenor-seagreen" style="height: 100%; display: flex;">
+                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
+                        <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <h1>Certificate of Completion</h1>
                                     <h6>This is presented to:</h6>
                                     <h2>
                                         <t t-esc="user_input.partner_id.name or user_input.email"/>
                                     </h2>
-
                                     <p>successfully completed<t t-esc="user_input.survey_id.display_name"/>.
                                     </p>
                                 </div>
