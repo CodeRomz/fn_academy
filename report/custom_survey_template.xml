@@ -40,10 +40,10 @@
                                 </div>
 
                             </div>
-                            <div class="row px-4">
+                            <div class="row px-5">
                                 <div class="col-12 px-5">
                                     <p class="mx-4" t-if="user_input.scoring_success">For successfully completing
-                                        <em><t t-esc="user_input.survey_id.display_name"/></em>. Your dedication, perseverance,
+                                        <em><t t-esc="user_input.survey_id.display_name"/></em>.<br/>Your dedication, perseverance,
                                         and hard work have not only earned you this certification but also reflect your
                                         commitment to excellence. Your efforts have made a meaningful impact, and we are
                                         incredibly proud of your achievement. This accomplishment demonstrates your
