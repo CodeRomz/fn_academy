@@ -19,7 +19,7 @@
                             }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
-                            <div class="row my-1 py-1">
+                            <div class="row mt-5 pt-5">
                                 <div class="col-12 my-1 py-1">
                                     <h1 class="my-1 py-1">
                                         Certificate <span t-if="user_input.scoring_success">of Achievement</span>
@@ -40,7 +40,7 @@
 
                             </div>
                             <div class="row px-5 mx-5 mt-4">
-                                <div class="col-12 px-5 my-3">
+                                <div class="col-12 px-5 my-2">
                                     <p class="mx-5" t-if="user_input.scoring_success">For successfully completing
                                         <em><t t-esc="user_input.survey_id.display_name"/></em>.<br/>Your dedication, perseverance,
                                         and hard work have not only earned you this certification but also reflect your
