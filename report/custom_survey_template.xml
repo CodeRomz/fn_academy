@@ -3,23 +3,18 @@
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="user_input">
-
-                    <!--<t t-set="layout_values"
-                       t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['firenor', 'seagreen']"/>-->
                     <t t-set="layout_values"
                        t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['not', 'thing']"/>
-
-                    <!--<t t-set="layout_values" t-value="['firenor', 'seagreen']"/>-->
                     <t t-set="layout_template" t-value="layout_values[0]"/>
                     <t t-set="layout_color" t-value="layout_values[1]"/>
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
                          t-att-data-oe-id="user_input.id"
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
                         <style>
-                            .firenorV1{
+                            .firenorV-One{
                             text
                             background-color: #ffffff !important;
-                            background: url(/fn_academy/static/img/seagreen_certificate_completion.png);
+                            background: url(/fn_academy/static/img/firenorV-One_seagreen.png);
                             background-size: cover;
                             border: 1px solid red;
                             text-align: center;
