@@ -42,7 +42,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <p t-if="user_input.scoring_success">For successfully completing<t
+                                    <p class="mx-3" t-if="user_input.scoring_success">For successfully completing<t
                                             t-esc="user_input.survey_id.display_name"/>. Your dedication, perseverance,
                                         and hard work have not only earned you this certification but also reflect your
                                         commitment to excellence. Your efforts have made a meaningful impact, and we are
