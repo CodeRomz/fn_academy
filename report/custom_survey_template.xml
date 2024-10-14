@@ -19,7 +19,7 @@
                             }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center' + layout_template + ' ' + layout_color}">
-                            <div class="row mt-5 pt-5">
+                            <div class="row mt-5 pt-4">
                                 <div class="col-12 mt-5 pt-5">
                                     <h1 class="my-1 py-1">
                                         Certificate
@@ -70,8 +70,13 @@
                                 <div class="col-6">Position 2</div>
                             </div>
                             <div class="row my-1 py-1" t-if="user_input.scoring_success">
-                                <div class="col-12 p-5" style="text-align: right !important;">Certification n°
+                                <div class="col-12 p-5 m-2" style="text-align: right !important;">Certification n°
                                     <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <br/>
                                 </div>
                             </div>
                         </div>
