@@ -10,61 +10,60 @@
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
                          t-att-data-oe-id="user_input.id"
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
-                    <style>
-                        .firenor-one{
-                        background-color: #ffffff !important;
-                        background: url(/fn_academy/static/img/firenor-one_seagreen.png);
-                        background-size: cover;
-                        border: 1px solid red;
-                        text-align: center;
-                        }
-                        .row{
-                        border: 1px solid blue;
-                        }
-                    </style>
-                    <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
-                        <div class="row">
-                            <div class="col-12">
-                                <h1>Certificate of Completion</h1>
+                        <style>
+                            .firenor-one{
+                            background-color: #ffffff !important;
+                            background: url(/fn_academy/static/img/firenor-one_seagreen.png);
+                            background-size: cover;
+                            border: 1px solid red;
+                            text-align: center;
+                            }
+                            .row{
+                            border: 1px solid blue;
+                            }
+                        </style>
+                        <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h1>Certificate of Completion</h1>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p>This is presetned to:</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>This is presetned to:</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <h1>
-                                    <t t-esc="user_input.partner_id.name or user_input.email"/>
-                                </h1>
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p>successfully completed<t t-esc="user_input.survey_id.display_name"/>.
-                                </p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h1>
+                                        <t t-esc="user_input.partner_id.name or user_input.email"/>
+                                    </h1>
+                                </div>
 
                             </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>successfully completed<t t-esc="user_input.survey_id.display_name"/>.
+                                    </p>
 
-                        </div>
-                        <div class="row">
-                            <div class="col-6">Name 1</div>
-                            <div class="col-6">Name 2</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-6">Posistion 1</div>
-                            <div class="col-6">Posistion2</div>
-                        </div>
-                        <div class="row" t-if="user_input.scoring_success">
-                            <div class="col-12">Certification n° <span t-out="str(user_input.id).rjust(10, '0')">
-                                0000000010
-                            </span>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Name 1</div>
+                                <div class="col-6">Name 2</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Posistion 1</div>
+                                <div class="col-6">Posistion2</div>
+                            </div>
+                            <div class="row" t-if="user_input.scoring_success">
+                                <div class="col-12">Certification n°
+                                    <span t-out="str(user_input.id).rjust(10, '0')"/>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </t>
             </t>
         </xpath>
