@@ -14,6 +14,7 @@
                             .firenor-seagreen {
                             font-family: "Arial", sans-serif;
                             background: url(/fn_academy/static/img/ceagreen_certificate_completion.png);
+                            background-size: cover;
                             }
 
                             .firenor-seagreen h1 {
