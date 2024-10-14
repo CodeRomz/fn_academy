@@ -23,7 +23,7 @@
                             border: 1px solid red;
                             }
                         </style>
-                        <div t-attf-class="#{'container ' + layout_template + ' ' + layout_color}">
+                        <div t-attf-class="#{'container-fluid h-100 d-flex justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
                             <div class="row">
                                 <div class="col">
                                     <h1>Certificate of Completion</h1>
