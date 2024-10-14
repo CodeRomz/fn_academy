@@ -27,7 +27,7 @@
                                     </h1>
                                 </div>
                             </div>
-                            <div class="row mt-1 pt-1">
+                            <div class="row mt-2 pt-1">
                                 <div class="col-12  mt-1 pt-1">
                                     <p class="mt-5 pt-5">This certificate is presented to</p>
                                 </div>
@@ -61,8 +61,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row my-5 py-1" t-if="user_input.scoring_success">
-                                <div class="col-12 p-5 m-3" style="text-align: right !important;">Certification n°
+
+                            <div class="row my-0 py-1" t-if="user_input.scoring_success">
+                                <div class="col-12 p-5 m-4" style="text-align: right !important;">Certification n°
                                     <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                 </div>
                             </div>
