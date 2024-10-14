@@ -41,7 +41,7 @@
 
                             </div>
                             <div class="row px-5 mx-5 mt-4">
-                                <div class="col-12 px-5 my-2">
+                                <div class="col-12 px-5 my-1">
                                     <p class="mx-2" t-if="user_input.scoring_success">For successfully completing
                                         <em>
                                             <t t-esc="user_input.survey_id.display_name"/>
@@ -53,7 +53,7 @@
                                         ability to rise to challenges and excel, and we look forward to witnessing your
                                         continued success in future endeavors.
                                     </p>
-                                    <p class="mx-2" t-else=" ">for taking the
+                                    <p class="mx-1" t-else=" ">for taking the
                                         <em>
                                             <t t-esc="user_input.survey_id.display_name"/>
                                         </em>
