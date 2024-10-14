@@ -16,9 +16,9 @@
                          t-att-data-oe-id="user_input.id"
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
                         <style>
-                            .firenor, .seagreen {
+                            .firenor{
                             background-color: #ffffff !important;
-                            background: url(/fn_academy/static/img/ceagreen_certificate_completion.png);
+                            background: url(/fn_academy/static/img/seagreen_certificate_completion.png);
                             background-size: cover;
                             border: 1px solid red;
                             }
@@ -26,20 +26,34 @@
                         <div t-attf-class="#{'container ' + layout_template + ' ' + layout_color}">
                             <div class="row">
                                 <div class="col">
-                                    <h6>This is presented to:</h6>
-                                    <h2>
-                                        <t t-esc="user_input.partner_id.name or user_input.email"/>
-                                    </h2>
-                                    <p>successfully completed<t t-esc="user_input.survey_id.display_name"/>.
-                                    </p>
-
-                                    <p>layout_template:
-                                        <t t-esc="layout_template"/>
-                                    </p>
-                                    <p>layout_color:
-                                        <t t-esc="layout_color"/>
-                                    </p>
+                                    <h1>Certificate of Completion</h1>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>This is presetned to:</p></div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h1>
+                                        <t t-esc="user_input.partner_id.name or user_input.email"/>
+                                    </h1>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p>successfully completed <t t-esc="user_input.survey_id.display_name"/>.</p>
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">Name 1</div>
+                                <div class="col">Name 2</div>
+                            </div>
+                            <div class="row">
+                                <div class="col">Posistion 1</div>
+                                <div class="col">Posistion2</div>
                             </div>
                         </div>
                     </div>
