@@ -20,9 +20,8 @@
                     <t t-set="layout_template" t-value="layout_values[0]"/>
                     <t t-set="layout_color" t-value="layout_values[1]"/>
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
-                         t-att-data-oe-id="user_input.id"
-                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
-                        <div class="container">
+                         t-att-data-oe-id="user_input.id" >
+                        <div t-attf-class="#{'container ' + layout_template + ' ' + layout_color}">
                             <div class="row">
                                 <div class="col">
                                     <h6>This is presented to:</h6>
