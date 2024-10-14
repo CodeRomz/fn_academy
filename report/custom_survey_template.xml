@@ -13,8 +13,10 @@
                     </style>
                     <!--<t t-set="layout_values"
                        t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['firenor', 'seagreen']"/>-->
+                    <t t-set="layout_values"
+                       t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout"/>
 
-                    <t t-set="layout_values" t-value="['firenor', 'seagreen']"/>
+                    <!--<t t-set="layout_values" t-value="['firenor', 'seagreen']"/>-->
                     <t t-set="layout_template" t-value="layout_values[0]"/>
                     <t t-set="layout_color" t-value="layout_values[1]"/>
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
@@ -30,7 +32,7 @@
                                     <p>successfully completed<t t-esc="user_input.survey_id.display_name"/>. </p>
 
                                     <p>layout_template: <t t-esc="layout_template"/></p>
-                                    <p>layout_template: <t t-esc="layout_color"/></p>
+                                    <p>layout_color: <t t-esc="layout_color"/></p>
                                 </div>
                             </div>
                         </div>
