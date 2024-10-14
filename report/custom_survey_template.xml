@@ -43,11 +43,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <p>successfully completed<t t-esc="user_input.survey_id.display_name"/>.
-                                    </p>
-
+                                    <p>successfully completed <t t-esc="user_input.survey_id.display_name"/>. </p>
                                 </div>
-
                             </div>
                             <div class="row">
                                 <div class="col-6">Name 1</div>
