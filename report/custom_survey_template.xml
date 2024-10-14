@@ -74,7 +74,7 @@
 
                             <div class="row m-5 p-4" t-if="user_input.scoring_success">
                                 <div class="col-12 mt-3 pt-3 px-5" style="text-align: right">
-                                    <p class="m-1" style="border-top: 2px solid white !important;">Certification n°
+                                    <p class="m-1" style="border-top: 1px solid white !important;">Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                     </p>
                                 </div>
