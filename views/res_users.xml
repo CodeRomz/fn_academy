@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <record id="action_redirect_to_slides" model="ir.actions.act_url">
+            <field name="name">Redirect to Slides</field>
+            <field name="url">/slides</field>
+            <field name="target">self</field>
+        </record>
+    </data>
+</odoo>
