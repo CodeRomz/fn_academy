@@ -12,7 +12,7 @@
     'website': "https://github.com/CodeRomz/fn_academy.git",
 
     'category': 'Website/eLearning',
-    'version': '17.0.1.0.0',
+    'version': '18.0.1.0.0',
 
     # any module necessary for this one to work correctly
     'depends': ['survey'],
