@@ -27,6 +27,7 @@
                             text-align: center;
                             }
                         </style>
+
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center' + layout_template + ' ' + layout_color}">
                             <div class="row mt-5 pt-5 mb-1">
                                 <div class="col-12 mt-5 pt-5">
