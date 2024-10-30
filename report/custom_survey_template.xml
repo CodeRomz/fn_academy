@@ -28,7 +28,7 @@
                             }
                         </style>
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center' + layout_template + ' ' + layout_color}">
-                            <div class="row mt-5 pt-4 mb-2">
+                            <div class="row mt-5 pt-5 mb-2">
                                 <div class="col-12 mt-5 pt-5">
                                     <h1 class="fn_font my-1 py-1" style="text-transform: uppercase !important;">
                                         Certificate
@@ -36,12 +36,12 @@
                                     </h1>
                                 </div>
                             </div>
-                            <div class="row mt-3 pt-1">
+                            <div class="row mt-2 pt-1">
                                 <div class="col-12  mt-1 pt-1">
                                     <p class="mt-5 pt-5">This certificate is presented to</p>
                                 </div>
                             </div>
-                            <div class="row mb-2">
+                            <div class="row mt-1 mb-2">
                                 <div class="col-12">
                                     <h1>
                                         <t t-esc="user_input.partner_id.name or user_input.email"/>
@@ -74,7 +74,7 @@
 
                             <div class="row m-5 p-4" t-if="user_input.scoring_success">
                                 <div class="col-12 mt-3 pt-3 px-5" style="text-align: right">
-                                    <p class="m-1" style="border-top: 1px solid white !important;">Certification n°
+                                    <p class="m-1" style="border-top: 1px solid rgba(255,255,255,0) !important;">Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                     </p>
                                 </div>
