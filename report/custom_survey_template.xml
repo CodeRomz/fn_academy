@@ -71,13 +71,16 @@
                                 </div>
                             </div>
 
-                            <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success" style="border: 1px solid black !important;">
-                                <div class="col-12 mt-3 pt-3 px-5" style="text-align: right">
-                                    <p class="m-1" style="border-top: 10px solid rgba(255,255,255,0) !important;">
+                            <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success" style="text-align: left; border: 1px solid black !important;">
+                                <div class="col-8">
+                                    <p>
                                         Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
-                                        <br/>
-                                        <span>Date: <t t-esc="user_input.create_date.strftime('%d-%mm-%Y')"/></span>
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <p>
+                                        <span>Date: <t t-esc="user_input.create_date.strftime('%d-%b-%Y')"/></span>
                                     </p>
                                 </div>
                             </div>
