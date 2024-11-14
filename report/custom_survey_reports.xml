@@ -2,15 +2,26 @@
 <odoo>
     <data>
         <!-- QWeb Reports -->
-        <record id="certification_report_1" model="ir.actions.report">
+        <!--<record id="certification_report_1" model="ir.actions.report">
             <field name="name">Certifications V1</field>
             <field name="model">survey.user_input</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">survey.certification_report_view</field>
             <field name="report_file">survey.certification_report_view</field>
             <field name="print_report_name">'Certification - %s' % (object.cert_name)</field>
-            <!--<field name="attachment">'certification.pdf'</field>-->
-            <!--<field name="binding_model_id" ref="model_survey_user_input"/>-->
+            <field name="attachment">'certification.pdf'</field>
+            <field name="binding_model_id" ref="model_survey_user_input"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="paperformat_survey_certification"/>
+        </record>-->
+
+        <record id="certification_report_1" model="ir.actions.report">
+            <field name="name">Certificate of Completion</field>
+            <field name="model">survey.user_input</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">survey.certification_report_view</field>
+            <field name="report_file">survey.certification_report_view</field>
+            <field name="print_report_name">'Certificate - %s' % (object.cert_name)</field>
             <field name="binding_type">report</field>
             <field name="paperformat_id" ref="paperformat_survey_certification"/>
         </record>
