@@ -11,4 +11,5 @@ class SurveyCertificateController(http.Controller):
         values = {
             'doc': user_input
         }
-        return request.render('survey.certification_report_template', values)
+        # Update this line to ensure correct reference to the view
+        return request.render('survey.certification_report_view', values)
