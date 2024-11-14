@@ -16,13 +16,14 @@
         </record>-->
 
         <record id="action_certification_report" model="ir.actions.report">
-            <field name="name">Certification Report</field>
+            <field name="name">Certification FNA</field>
             <field name="model">survey.user_input</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">survey.certification_report_view</field>
-            <field name="print_report_name">'Certification - %s - %s' % (object.survey_id.display_name, object.partner_id.name) </field>
+            <field name="print_report_name">'Certification - %s - %s - %s' % (object.survey_id.display_name, object.partner_id.name, object.create_date) </field>
             <field name="binding_model_id" ref="survey.model_survey_user_input"/>
             <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="paperformat_survey_certification"/>
         </record>
     </data>
 </odoo>
