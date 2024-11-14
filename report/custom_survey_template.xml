@@ -76,7 +76,7 @@
                                     <p class="m-1" style="border-top: 10px solid rgba(255,255,255,0) !important;">
                                         Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
-                                        <span t-out="str('Date: ')str(user_input.create_date.strftime('%Y-%m-%d'))"/>
+                                        <span>Date: <t t-esc="user_input.create_date.strftime('%Y-%m-%d')"/></span>
                                     </p>
                                 </div>
                             </div>
