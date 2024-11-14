@@ -9,7 +9,7 @@ class SurveyCertificateController(http.Controller):
             return request.not_found()
 
         values = {
-            'doc': user_input
+            'docs': user_input,
+            'share_url': request.httprequest.host_url + 'survey/certification/' + str(user_input_id)
         }
-        # Update this line to ensure correct reference to the view
         return request.render('survey.certification_report_view', values)
