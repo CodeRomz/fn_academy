@@ -23,7 +23,6 @@
             <field name="print_report_name">'Certification - %s - %s - %s' % (object.survey_id.display_name, object.partner_id.name, object.create_date) </field>
             <field name="binding_model_id" ref="survey.model_survey_user_input"/>
             <field name="binding_type">report</field>
-            <field name="paperformat_id" ref="paperformat_survey_certification"/>
         </record>
     </data>
 </odoo>
