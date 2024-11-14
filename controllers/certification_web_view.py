@@ -2,7 +2,7 @@ from odoo import http
 from odoo.http import request
 
 class SurveyCertificateController(http.Controller):
-    @http.route(['/survey/certification/<int:user_input_id>'], type='http', auth='public', website=True)
+    @http.route(['/fna/certification/<int:user_input_id>'], type='http', auth='public', website=True)
     def view_certificate(self, user_input_id, **kwargs):
         user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
         if not user_input.exists():
@@ -10,6 +10,6 @@ class SurveyCertificateController(http.Controller):
 
         values = {
             'docs': user_input,
-            'share_url': request.httprequest.host_url + 'survey/certification/' + str(user_input_id)
+            'share_url': request.httprequest.host_url + 'fna/certification/' + str(user_input_id)
         }
         return request.render('survey.certification_report_view', values)
