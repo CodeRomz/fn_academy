@@ -18,7 +18,7 @@
                             font-style: normal;
                             }
                             .fn_font{
-                            font-family: 'Square721BT', sans-serif !important;
+                            font-family: 'Square721BT' !important;
                             }
                             .firenor-one{
                             background-color: #ffffff !important;
