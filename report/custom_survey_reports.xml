@@ -21,7 +21,7 @@
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">survey.certification_report_view</field>
             <field name="report_file">survey.certification_report_view</field>
-            <field name="print_report_name">'Certificate - %s' % (object.cert_name)</field>
+            <field name="print_report_name">'Certificate - %s' % (object.survey_id.display_name)</field>
             <field name="binding_type">report</field>
             <field name="paperformat_id" ref="paperformat_survey_certification"/>
         </record>
