@@ -24,6 +24,7 @@
         # 'report/report.xml',
         'views/res_users.xml',
         'report/custom_survey_template.xml',
+        'report/custom_survey_reports.xml',
     ],
     'installable': True,
     'application': True,
