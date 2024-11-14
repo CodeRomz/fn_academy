@@ -71,14 +71,14 @@
                                 </div>
                             </div>
 
-                            <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success" style="text-align: left; border: 1px solid black !important;">
+                            <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success" style="text-align: left !important;">
                                 <div class="col-8">
                                     <p>
 
                                     </p>
                                 </div>
                                 <div class="col-4">
-                                    <p style="border-top: 10px solid rgba(255,255,255,0) !important;">
+                                    <p style="border-top: 20px solid rgba(255,255,255,0) !important;">
                                         Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                         <br/>
