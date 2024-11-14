@@ -8,7 +8,7 @@
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">survey.certification_report_view</field>
             <field name="report_file">survey.certification_report_view</field>
-            <field name="print_report_name">'Certification - %s - %s - %s' % (object.survey_id.display_name, object.partner_id.name, object.create_date.strftime("%Y-%m-%d"))</field>
+            <field name="print_report_name">'Certification - %s - %s - %s' % (object.survey_id.display_name, object.partner_id.name, object.create_date or '')</field>
             <field name="attachment">'certification.pdf'</field>
             <field name="binding_model_id" ref="model_survey_user_input"/>
             <field name="binding_type">report</field>
