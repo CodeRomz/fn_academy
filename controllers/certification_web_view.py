@@ -6,8 +6,8 @@ class SurveyCertificateController(http.Controller):
     def view_certificate(self, user_input_id, **kwargs):
         # Fetch the survey response using sudo() to bypass security restrictions
         user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
-        if not user_input.exists():
-            return request.not_found()
+        # if not user_input.exists():
+        #     return request.not_found()
 
         # Prepare values for rendering
         values = {
