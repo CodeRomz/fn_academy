@@ -25,6 +25,7 @@
                             background: url(/fn_academy/static/img/firenor-one_seagreen.png);
                             background-size: cover;
                             text-align: center;
+                            overflow: hidden;
                             }
                         </style>
 
