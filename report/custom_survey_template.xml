@@ -79,7 +79,7 @@
                                     </p>
                                 </div>
                                 <div class="col-4">
-                                    <p style="border-top: 50px solid rgba(255,255,255,0) !important;">
+                                    <p style="border-top: 48px solid rgba(255,255,255,0) !important;">
                                         Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                         <br/>
