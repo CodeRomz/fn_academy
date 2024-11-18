@@ -7,9 +7,8 @@
                        t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['not', 'thing']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
                     <t t-set="layout_color" t-value="layout_values[1]"/>
-                    <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
-                         t-att-data-oe-id="user_input.id"
-                         t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
+                    <div id="o_survey_certification" t-att-data-oe-model="user_input._name" t-att-data-oe-id="user_input.id" t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
+
                         <style>
                             @font-face {
                             font-family: 'Square721BT';
@@ -30,6 +29,7 @@
                         </style>
 
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center' + layout_template + ' ' + layout_color}">
+
                             <div class="row mt-5 pt-5 mb-1 fn_font">
                                 <div class="col-12 mt-5 pt-5">
                                     <h1 class="my-1 py-1" style="text-transform: uppercase !important;">
