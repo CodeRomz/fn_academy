@@ -3,32 +3,30 @@
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="user_input">
-                    <t t-set="layout_values"
-                       t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['not', 'thing']"/>
+                    <t t-set="layout_values" t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['not', 'thing']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
                     <t t-set="layout_color" t-value="layout_values[1]"/>
+                    <style>
+                        @font-face {
+                        font-family: 'Square721BT';
+                        src: url('/fn_academy/static/fonts/square_721_bt.ttf') format('truetype');
+                        font-weight: normal;
+                        font-style: normal;
+                        }
+                        .fn_font{
+                        font-family: 'Square721BT' !important;
+                        }
+                        .firenor-one{
+                        background-color: #ffffff !important;
+                        background: url(/fn_academy/static/img/firenor-one_seagreen.png);
+                        background-size: cover;
+                        text-align: center;
+                        overflow: hidden;
+                        }
+                    </style>
                     <div id="o_survey_certification" t-att-data-oe-model="user_input._name"
                          t-att-data-oe-id="user_input.id"
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
-                        <style>
-                            @font-face {
-                            font-family: 'Square721BT';
-                            src: url('/fn_academy/static/fonts/square_721_bt.ttf') format('truetype');
-                            font-weight: normal;
-                            font-style: normal;
-                            }
-                            .fn_font{
-                            font-family: 'Square721BT' !important;
-                            }
-                            .firenor-one{
-                            background-color: #ffffff !important;
-                            background: url(/fn_academy/static/img/firenor-one_seagreen.png);
-                            background-size: cover;
-                            text-align: center;
-                            overflow: hidden;
-                            }
-                        </style>
-
                         <div t-attf-class="#{'container h-100 justify-content-center align-items-center' + layout_template + ' ' + layout_color}">
                             <div class="row mt-5 pt-5 mb-1 fn_font">
                                 <div class="col-12 mt-5 pt-5">
@@ -72,7 +70,8 @@
                                 </div>
                             </div>
 
-                            <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success" style="text-align: left !important;">
+                            <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success"
+                                 style="text-align: left !important;">
                                 <div class="col-8">
                                     <p>
 
@@ -83,7 +82,9 @@
                                         Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
                                         <br/>
-                                        <span>Date: <t t-esc="user_input.create_date.strftime('%d-%b-%Y')"/></span>
+                                        <span>Date:
+                                            <t t-esc="user_input.create_date.strftime('%d-%b-%Y')"/>
+                                        </span>
                                     </p>
                                 </div>
                             </div>
