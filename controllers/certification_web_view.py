@@ -24,7 +24,10 @@ class SurveyCertificateController(http.Controller):
         return request.render('survey.certification_report_view', values)
 
     @http.route(['/fna/certification/<int:user_input_id>/image'], type='http', auth='public')
-    def certificate_image(self, user_input_id, **kwargs):
+    def get_certificate_image(self, user_input_id, **kwargs):
+        """
+        Serve the certificate image for a given user_input_id.
+        """
         user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
         if not user_input.exists():
             _logger.warning(f"User input with ID {user_input_id} not found.")
