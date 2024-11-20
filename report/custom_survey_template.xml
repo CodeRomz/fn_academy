@@ -12,8 +12,8 @@
                         <!--<meta property="og:image" t-att-content="'/path/to/dynamic/certificate_image_' + str(user_input.id) + '.png'" />-->
                         <meta property="og:site_name" content="Firenor Academy" />
                         <!-- Author and Publish Date -->
-                        <meta property="article:author" content="Firenor Academy" />
-                        <meta property="article:published_time" t-att-content="user_input.create_date.strftime('%Y-%m-%dT%H:%M:%S')" />
+                        <meta property="og:author" content="Firenor Academy" />
+                        <meta property="og:published_time" t-att-content="user_input.create_date.strftime('%Y-%m-%dT%H:%M:%S')" />
                     </head>
 
                     <t t-set="layout_values"
