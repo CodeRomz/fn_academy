@@ -9,7 +9,7 @@
                         <meta property="og:title" t-att-content="'Certificate of Achievement for ' + (user_input.partner_id.name or user_input.email)" />
                         <meta property="og:description" t-att-content="'This certificate is presented to ' + (user_input.partner_id.name or user_input.email) + ' for successfully completing the ' + user_input.survey_id.display_name" />
                         <meta property="og:url" t-att-content="'https://firenor.academy/fna/certification/' + str(user_input.id)" />
-                        <meta property="og:image" t-att-content="'%sfn_academy/static/img/screenshot.png' % request.httprequest.host_url" />
+                        <meta property="og:image" t-att-content="https://raw.githubusercontent.com/CodeRomz/fn_academy/refs/heads/dev/static/img/screenshot.png" />
                         <meta property="og:site_name" content="Firenor Academy" />
                         <meta property="article:author" content="Firenor Academy" />
                         <meta property="article:published_time" t-att-content="user_input.create_date.strftime('%d-%b-%Y')" />
