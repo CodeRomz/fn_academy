@@ -4,6 +4,7 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
+
 class SurveyCertificateController(http.Controller):
     @http.route(['/fna/certification/<int:user_input_id>'], type='http', auth='public', website=True)
     def view_certificate(self, user_input_id, **kwargs):
@@ -21,7 +22,15 @@ class SurveyCertificateController(http.Controller):
             'docs': user_input,
             'share_url': f"{request.httprequest.host_url}fna/certification/{user_input_id}",
         }
-        return request.render('survey.certification_report_view', values)
+
+        # Logging for debugging
+        _logger.info(f"Rendering certificate for user input ID: {user_input_id}")
+
+        try:
+            return request.render('survey.certification_report_view', values)
+        except Exception as e:
+            _logger.error(f"Error rendering certificate: {e}")
+            return request.not_found()
 
     @http.route(['/fna/certification/<int:user_input_id>/image'], type='http', auth='public')
     def get_certificate_image(self, user_input_id, **kwargs):
@@ -31,10 +40,18 @@ class SurveyCertificateController(http.Controller):
         # Fetch the survey.user_input record using sudo()
         user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
         if not user_input.exists() or not user_input.certificate_image:
-            # Return a placeholder or 404 if the image is missing
-            return request.not_found()
+            _logger.warning(f"User input with ID {user_input_id} or certificate image not found.")
+            placeholder = open('/fn_academy/static/img/firenor-one_seagreen.png', 'rb').read()  # Replace with the actual placeholder
+            return request.make_response(
+                placeholder,
+                headers=[
+                    ('Content-Type', 'image/png'),
+                    ('Content-Disposition', 'inline; filename=placeholder.png'),
+                ]
+            )
 
         # Serve the image as a binary response
+        _logger.info(f"Serving certificate image for user input ID: {user_input_id}")
         return request.make_response(
             user_input.certificate_image,
             headers=[
@@ -42,4 +59,3 @@ class SurveyCertificateController(http.Controller):
                 ('Content-Disposition', f'inline; filename=certificate_{user_input_id}.png'),
             ]
         )
-
