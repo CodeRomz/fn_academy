@@ -6,11 +6,11 @@
                     <!-- Open Graph Meta Tags for Certificate Sharing -->
                     <head>
                         <!-- Embed the image inline using Base64 -->
-                        <img t-attf-src="'data:image/png;base64,{{user_input.certificate_image.decode('utf-8')}}'"
+                        <img t-attf-src="data:image/*;base64,{{user_input.certificate_image}}"
                              alt="Certificate Image"/>
 
                         <!-- Open Graph Meta Tag -->
-                        <meta property="og:image" t-att-content="'data:image/png;base64,{{user_input.certificate_image.decode('utf-8')}}'"/>
+                        <meta property="og:image" t-att-content="data:image/*;base64,{{user_input.certificate_image}}"/>
 
                         <meta property="og:type" content="website"/>
                         <meta property="og:title" t-att-content="'Certificate of Achievement for ' + (user_input.partner_id.name or user_input.email)"/>
