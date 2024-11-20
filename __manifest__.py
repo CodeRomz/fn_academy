@@ -22,6 +22,7 @@
         # 'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'report/report.xml',
+        'security/fn_acad_security_rules.xml'
         'views/res_users.xml',
         'report/custom_survey_template.xml',
         'report/custom_survey_reports.xml',
