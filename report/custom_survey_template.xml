@@ -3,17 +3,16 @@
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="user_input">
-                    <!-- Open Graph Meta Tags for LinkedIn -->
+                    <!-- Open Graph Meta Tags for Certificate Sharing -->
                     <head>
-                        <meta property="og:type" content="website" />
+                        <meta property="og:type" content="article" />
                         <meta property="og:title" t-att-content="'Certificate of Achievement for ' + (user_input.partner_id.name or user_input.email)" />
                         <meta property="og:description" t-att-content="'This certificate is presented to ' + (user_input.partner_id.name or user_input.email) + ' for successfully completing the ' + user_input.survey_id.display_name" />
                         <meta property="og:url" t-att-content="'https://firenor.academy/fna/certification/' + str(user_input.id)" />
-                        <!--<meta property="og:image" t-att-content="'/path/to/dynamic/certificate_image_' + str(user_input.id) + '.png'" />-->
+                        <!--<meta property="og:image" t-att-content="'/firenor.academy/static/img/certificate_image_' + str(user_input.id) + '.png'" />-->
                         <meta property="og:site_name" content="Firenor Academy" />
-                        <!-- Author and Publish Date -->
-                        <meta property="og:author" content="Firenor Academy" />
-                        <meta property="og:published_time" t-att-content="user_input.create_date.strftime('%Y-%m-%dT%H:%M:%S')" />
+                        <meta property="article:author" content="Firenor Academy" />
+                        <meta property="article:published_time" t-att-content="user_input.create_date.strftime('%d-%b-%Y')" />
                     </head>
 
                     <t t-set="layout_values"
@@ -87,9 +86,7 @@
 
                             <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success" style="text-align: left !important;">
                                 <div class="col-8">
-                                    <p>
-
-                                    </p>
+                                    <p></p>
                                 </div>
                                 <div class="col-4">
                                     <p style="border-top: 48px solid rgba(255,255,255,0) !important;">
