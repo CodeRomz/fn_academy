@@ -3,20 +3,6 @@
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="user_input">
-                    <!-- Open Graph Meta Tags for Certificate Sharing -->
-                    <head>
-                        <meta property="og:type" content="website"/>
-                        <meta property="og:title" t-att-content="'Certificate of Achievement for ' + (user_input.partner_id.name or user_input.email)"/>
-                        <meta property="og:description" t-att-content="'This certificate is presented to ' + (user_input.partner_id.name or user_input.email) + ' for successfully completing the ' + user_input.survey_id.display_name"/>
-                        <meta property="og:url" t-att-content="'%sfna/certification/%s' % (request.httprequest.host_url, user_input.id)"/>
-                        <!--<meta property="og:image" t-att-content="'%sweb/image/survey.user_input/%s/certificate_image' % (request.httprequest.host_url, user_input.id)"/>-->
-                        <!--<meta property="og:image" t-attf-content="{{request.httprequest.host_url}}fna/certification/{{user_input.id}}/image" />-->
-                        <meta property="og:image" t-attf-content="https://firenor.academy/web/image/website/1/logo/Firenor?unique=0b06315" />
-
-                        <meta property="og:site_name" content="Firenor Academy"/>
-                        <meta property="linkedin:card" content="summary_large_image"/>
-                    </head>
-
                     <t t-set="layout_values"
                        t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['not', 'thing']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
