@@ -5,7 +5,7 @@
                 <t t-foreach="docs" t-as="user_input">
                     <!-- Set dynamic values for Open Graph metadata -->
                     <!--<t t-set="certificate_image_url" t-value="'%s/web/image/certificate/%s' % (request.httprequest.host_url, user_input.id)"/>-->
-                    <t t-set="certificate_image_url" t-value="https://firenor.academy/web/image/website/1/logo/Firenor?unique=8e95fca"/>
+                    <t t-set="certificate_image_url" t-value="'%sweb/image/website/1/logo/Firenor?unique=8e95fca'% (request.httprequest.host_url)"/>
 
                     <t t-set="certificate_page_url" t-value="'%s/fna/certification/%s' % (request.httprequest.host_url, user_input.id)"/>
 
