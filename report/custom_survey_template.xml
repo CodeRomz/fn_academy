@@ -6,18 +6,24 @@
                     <!-- Set dynamic values for Open Graph metadata -->
                     <!--<t t-set="certificate_image_url" t-value="'%s/web/image/certificate/%s' % (request.httprequest.host_url, user_input.id)"/>-->
                     <t t-set="certificate_image_url" t-value="'%sweb/image/website/1/logo/Firenor?unique=8e95fca'% (request.httprequest.host_url)"/>
-
                     <t t-set="certificate_page_url" t-value="'%s/fna/certification/%s' % (request.httprequest.host_url, user_input.id)"/>
 
                     <head>
                         <!-- Open Graph Metadata -->
                         <meta property="og:title" t-att-content="'Certificate of Completion for %s' % user_input.survey_id.display_name"/>
-                        <meta property="og:description"
+                        <meta property="og:description" 
                               t-att-content="'I earned this certificate for completing the %s course on Firenor Academy! This certificate represents my achievement in %s.' % (user_input.survey_id.display_name, 'specific skills or knowledge gained')"/>
                         <meta property="og:image" t-att-content="certificate_image_url"/>
                         <meta property="og:url" t-att-content="certificate_page_url"/>
                         <meta property="og:type" content="article"/>
                         <meta property="og:site_name" content="Firenor Academy"/>
+
+                        <!-- Twitter Card Metadata -->
+                        <meta name="twitter:card" content="summary_large_image"/>
+                        <meta name="twitter:title" t-att-content="'Certificate of Completion for %s' % user_input.survey_id.display_name"/>
+                        <meta name="twitter:description" t-att-content="'I earned this certificate for completing the %s course on Firenor Academy! This certificate represents my achievement in %s.' % (user_input.survey_id.display_name, 'specific skills or knowledge gained')"/>
+                        <meta name="twitter:image" t-att-content="certificate_image_url"/>
+                        <meta name="twitter:url" t-att-content="certificate_page_url"/>
                     </head>
 
                     <!-- Certification Layout -->
