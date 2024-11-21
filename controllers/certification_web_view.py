@@ -21,4 +21,4 @@ class SurveyCertificateController(http.Controller):
             'docs': user_input,
             'share_url': f"{request.httprequest.host_url}fna/certification/{user_input_id}",
         }
-        return request.render('survey.certification_report_view_web', values)
+        return request.render('survey.certification_report_view', values)
