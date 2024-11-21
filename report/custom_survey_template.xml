@@ -1,32 +1,36 @@
 <odoo>
+    <!-- Inherit survey.certification_report_view for customization -->
     <template id="certification_report_view" inherit_id="survey.certification_report_view" priority="20">
+        <xpath expr="//head" position="inside">
+            <!-- Inject Open Graph and Twitter metadata -->
+            <t t-foreach="docs" t-as="user_input">
+                <!-- Dynamic Metadata -->
+                <t t-set="certificate_image_url" t-value="'%s/web/image/website/1/logo/Firenor?unique=8e95fca' % (request.httprequest.host_url)"/>
+                <t t-set="certificate_page_url" t-value="'%sfna/certification/%s' % (request.httprequest.host_url, user_input.id)"/>
+
+                <!-- Open Graph Metadata -->
+                <meta property="og:title" t-att-content="'Certificate of Completion for %s' % user_input.survey_id.display_name"/>
+                <meta property="og:description"
+                      t-att-content="'I earned this certificate for completing the %s course on Firenor Academy! This certificate represents my achievement in %s.' % (user_input.survey_id.display_name, 'specific skills or knowledge gained')"/>
+                <meta property="og:image" t-att-content="certificate_image_url"/>
+                <meta property="og:url" t-att-content="certificate_page_url"/>
+                <meta property="og:type" content="article"/>
+                <meta property="og:site_name" content="Firenor Academy"/>
+
+                <!-- Twitter Card Metadata -->
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta name="twitter:title" t-att-content="'Certificate of Completion for %s' % user_input.survey_id.display_name"/>
+                <meta name="twitter:description"
+                      t-att-content="'I earned this certificate for completing the %s course on Firenor Academy! This certificate represents my achievement in %s.' % (user_input.survey_id.display_name, 'specific skills or knowledge gained')"/>
+                <meta name="twitter:image" t-att-content="certificate_image_url"/>
+                <meta name="twitter:url" t-att-content="certificate_page_url"/>
+            </t>
+        </xpath>
+
+        <!-- Modify Certificate Layout -->
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="user_input">
-                    <!-- Set dynamic values for Open Graph metadata -->
-                    <!--<t t-set="certificate_image_url" t-value="'%s/web/image/certificate/%s' % (request.httprequest.host_url, user_input.id)"/>-->
-                    <t t-set="certificate_image_url" t-value="'%sweb/image/website/1/logo/Firenor?unique=8e95fca'% (request.httprequest.host_url)"/>
-                    <t t-set="certificate_page_url" t-value="'%s/fna/certification/%s' % (request.httprequest.host_url, user_input.id)"/>
-
-                    <head>
-                        <!-- Open Graph Metadata -->
-                        <meta property="og:title" t-att-content="'Certificate of Completion for %s' % user_input.survey_id.display_name"/>
-                        <meta property="og:description" 
-                              t-att-content="'I earned this certificate for completing the %s course on Firenor Academy! This certificate represents my achievement in %s.' % (user_input.survey_id.display_name, 'specific skills or knowledge gained')"/>
-                        <meta property="og:image" t-att-content="certificate_image_url"/>
-                        <meta property="og:url" t-att-content="certificate_page_url"/>
-                        <meta property="og:type" content="article"/>
-                        <meta property="og:site_name" content="Firenor Academy"/>
-
-                        <!-- Twitter Card Metadata -->
-                        <meta name="twitter:card" content="summary_large_image"/>
-                        <meta name="twitter:title" t-att-content="'Certificate of Completion for %s' % user_input.survey_id.display_name"/>
-                        <meta name="twitter:description" t-att-content="'I earned this certificate for completing the %s course on Firenor Academy! This certificate represents my achievement in %s.' % (user_input.survey_id.display_name, 'specific skills or knowledge gained')"/>
-                        <meta name="twitter:image" t-att-content="certificate_image_url"/>
-                        <meta name="twitter:url" t-att-content="certificate_page_url"/>
-                    </head>
-
-                    <!-- Certification Layout -->
                     <t t-set="layout_values"
                        t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['not', 'thing']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
