@@ -27,22 +27,27 @@ class SurveyCertificateController(http.Controller):
     @http.route('/fna/certification/web/<int:user_input_id>/', auth='public', website=True)
     def view_web_certificate(self, user_input_id, **kwargs):
         """
-        Render the certificate page for the given user_input_id.
+        Render the certification page for the given user_input_id.
         """
-        # Fetch the survey response using sudo() to bypass security restrictions
+
+        # Log the attempt to fetch the user input
+        _logger.info(f"Attempting to fetch user input with ID: {user_input_id}")
+
+        # Manually fetch the survey response without automatic slug behavior
         user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
+
+        # Ensure the record exists
         if not user_input.exists():
             _logger.warning(f"User input with ID {user_input_id} not found.")
             return request.not_found()
 
-        # Prevent default Odoo redirection to canonical URLs with slugs
-        request.params['avoid_canonical'] = True
-
-        # Prepare values for rendering the page
+        # Prepare rendering values
         values = {
             'user_input': user_input,
-            'partner_name': user_input.partner_id.name if user_input.partner_id else "N/A",
         }
 
+        # Log the rendering action
         _logger.info(f"Rendering certification for user input ID {user_input_id}")
+
+        # Render the certification page using the custom view
         return request.render('survey.certification_web_view', values)
