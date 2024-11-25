@@ -41,4 +41,4 @@ class SurveyCertificateController(http.Controller):
         }
 
         _logger.info(f"Rendering certification for user input ID {user_input_id}")
-        return request.render('survey.certification_web_view', values)
+        return request.render('survey.user_input.certification_web_view', values)
