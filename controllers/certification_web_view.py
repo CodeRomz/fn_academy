@@ -34,9 +34,11 @@ class SurveyCertificateController(http.Controller):
             _logger.warning(f"User input with ID {user_input_id} not found.")
             return request.not_found()
 
-        # Prepare values for rendering
+        # Prepare values for rendering the page
         values = {
-            'docs': user_input,
-            'share_url': f"{request.httprequest.host_url}fna/certification/web/{user_input_id}",
+            'user_input': user_input,
+            'partner_name': user_input.partner_id.name if user_input.partner_id else "N/A",
         }
+
+        _logger.info(f"Rendering certification for user input ID {user_input_id}")
         return request.render('survey.certification_web_view', values)
