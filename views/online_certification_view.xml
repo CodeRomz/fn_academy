@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <template id="object">
+        <template id="certification_web_view">
             <t t-call="website.layout">
 
                 <h1>PAGE TEST</h1>
@@ -99,12 +99,4 @@
             </t>
         </template>
     </data>
-
-
-    <record id="fna_certification_web_page" model="website.page">
-        <field name="name">Certification</field>
-        <field name="website_published">True</field>
-        <field name="url">/fna/certification/web/</field>
-        <field name="view_id" ref="object"/>
-    </record>
 </odoo>

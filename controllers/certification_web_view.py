@@ -23,9 +23,20 @@ class SurveyCertificateController(http.Controller):
         }
         return request.render('survey.certification_report_view', values)
 
+    @http.route(['/fna/certification/web/<int:user_input_id>'], type='http', auth='public', website=True)
+    def view_web_certificate(self, user_input_id, **kwargs):
+        """
+        Render the certificate page for the given user_input_id.
+        """
+        # Fetch the survey response using sudo() to bypass security restrictions
+        user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
+        if not user_input.exists():
+            _logger.warning(f"User input with ID {user_input_id} not found.")
+            return request.not_found()
 
-    @http.route('/fna/certification/web/<model("survey.user_input"):obj_id>/', type='http', auth='public', website=True)
-    def object(self, obj_id, **kw):
-        return http.request.render('survey.object', {
-            'object': obj_id.sudo()
-        })
+        # Prepare values for rendering
+        values = {
+            'docs': user_input,
+            'share_url': f"{request.httprequest.host_url}fna/certification/web/{user_input_id}",
+        }
+        return request.render('survey.certification_web_view', values)
