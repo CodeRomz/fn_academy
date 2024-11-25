@@ -24,9 +24,11 @@
         # 'report/report.xml',
         'security/fn_acad_security_rules.xml',
         'views/res_users.xml',
+        'views/online_certification_view.xml',
         'views/survey_user_views.xml',
         'report/custom_survey_template.xml',
         'report/custom_survey_reports.xml',
+
     ],
     'installable': True,
     'application': True,
