@@ -2,7 +2,11 @@
     <data>
         <template id="object">
             <t t-call="website.layout">
-                <t t-set="layout_values"
+
+                <h1>PAGE TEST</h1>
+
+
+                <!--<t t-set="layout_values"
                    t-value="object.survey_id.certification_report_layout.split('_') if object.survey_id.certification_report_layout else ['not', 'thing']"/>
                 <t t-set="layout_template" t-value="layout_values[0]"/>
                 <t t-set="layout_color" t-value="layout_values[1]"/>
@@ -31,7 +35,7 @@
                     <t t-set="title">Details</t>
                     <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
                         <h1>PAGE TEST</h1>
-                        <!--<div class="row mt-5 pt-5 mb-1 fn_font">
+                        <div class="row mt-5 pt-5 mb-1 fn_font">
                             <div class="col-12 mt-5 pt-5">
                                 <h1 class="my-1 py-1" style="text-transform: uppercase !important;">
                                     Certificate
@@ -87,20 +91,20 @@
                                     </span>
                                 </p>
                             </div>
-                        </div>-->
+                        </div>
 
 
                     </div>
-                </div>
+                </div>-->
             </t>
         </template>
     </data>
 
 
-<!--    <record id="fna_certification_web_page" model="website.page">
+    <record id="fna_certification_web_page" model="website.page">
         <field name="name">Certification</field>
         <field name="website_published">True</field>
         <field name="url">/fna/certification/web/</field>
-        <field name="view_id" ref="list"/>
-    </record>-->
+        <field name="view_id" ref="object"/>
+    </record>
 </odoo>
