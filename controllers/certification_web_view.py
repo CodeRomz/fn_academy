@@ -4,6 +4,7 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
+
 class SurveyCertificateController(http.Controller):
     @http.route(['/fna/certification/<int:user_input_id>'], type='http', auth='public', website=True)
     def view_certificate(self, user_input_id, **kwargs):
@@ -23,8 +24,13 @@ class SurveyCertificateController(http.Controller):
         }
         return request.render('survey.certification_report_view', values)
 
-    @http.route('/fna/certification/web/<model("survey.user_input"):obj>/', auth='public', website=True)
-    def view_web_certificate(self, obj, **kw):
+    @http.route('/fna/certification/web/<int:user_input_id>/', auth='public', website=True)
+    def view_web_certificate(self, user_input_id, **kw):
+        # Manually browse the survey.user_input record without automatic slug behavior
+        user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
+        if not user_input.exists():
+            return request.not_found()
+
         return request.render('survey.certification_web_view', {
-            'object': obj.sudo()
+            'object': user_input
         })
