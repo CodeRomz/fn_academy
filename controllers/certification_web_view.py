@@ -33,7 +33,7 @@ class SurveyCertificateController(http.Controller):
         # Log the attempt to fetch the user input
         _logger.info(f"Attempting to fetch user input with ID: {user_input_id}")
 
-        # Manually fetch the survey response without automatic slug behavior
+        # Fetch the survey response
         user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
 
         # Ensure the record exists
@@ -46,8 +46,8 @@ class SurveyCertificateController(http.Controller):
             'user_input': user_input,
         }
 
-        # Log the rendering action
-        _logger.info(f"Rendering certification for user input ID {user_input_id}")
+        # Log the successful fetching of the user input
+        _logger.info(f"Successfully fetched user input: {user_input}")
 
-        # Render the certification page using the custom view
+        # Render the certification page using the custom template
         return request.render('survey.certification_web_view', values)
