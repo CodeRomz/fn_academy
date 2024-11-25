@@ -12,7 +12,7 @@
                 </div>
 
                 <!-- Visible Image Tag for Social Media Sharing -->
-                <div style="display:none;">
+                <div ><!--style="display:none;"-->
                     <img src="https://firenor.academy/fn_academy/static/img/firenor-one_seagreen.png" alt="Certification Preview" />
                 </div>
 
