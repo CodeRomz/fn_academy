@@ -25,8 +25,6 @@
         'views/survey_user_views.xml',
         'report/custom_survey_template.xml',
         'report/custom_survey_reports.xml',
-        'views/certification_share_view.xml',
-
     ],
     'installable': True,
     'application': True,
