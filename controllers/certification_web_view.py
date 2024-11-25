@@ -24,7 +24,7 @@ class SurveyCertificateController(http.Controller):
         return request.render('survey.certification_report_view', values)
 
 
-    @http.route('/fna/certification/web/<model("survey.user_input"):obj_id>/', auth='public', website=True)
+    @http.route('/fna/certification/web/<model("survey.user_input"):obj_id>/', type='http', auth='public', website=True)
     def object(self, obj_id, **kw):
         return http.request.render('survey.object', {
             'object': obj_id.sudo()
