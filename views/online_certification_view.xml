@@ -6,8 +6,7 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <h1>Certification Information</h1>
-                            <p>User Input ID: <t t-esc="object.id" /></p>
-                            <p>Partner Name: <t t-esc="object.partner_id.name if object.partner_id else 'N/A'" /></p>
+                            <h2>User Input ID: <t t-esc="user_input.id" /></h2>
                         </div>
                     </div>
                 </div>
