@@ -2,16 +2,15 @@
     <data>
         <template id="certification_web_view" name="Certification Web View">
             <t t-call="website.layout">
-                <div class="container">
-                    <h1>Certification Information</h1>
-                    <p>User Input ID:
-                        <t t-esc="object.id"/>
-                    </p>
-                    <p>Partner Name:
-                        <t t-esc="object.partner_id.name if object.partner_id else 'N/A'"/>
-                    </p>
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>Certification Information</h1>
+                            <p>User Input ID: <t t-esc="object.id" /></p>
+                            <p>Partner Name: <t t-esc="object.partner_id.name if object.partner_id else 'N/A'" /></p>
+                        </div>
+                    </div>
                 </div>
-
             </t>
         </template>
     </data>
