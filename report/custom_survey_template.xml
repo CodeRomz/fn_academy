@@ -2,6 +2,26 @@
     <template id="certification_report_view" inherit_id="survey.certification_report_view" priority="20">
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
+                <!-- JavaScript to dynamically add Open Graph tags for LinkedIn sharing -->
+                <script type="text/javascript">
+                    (function() {
+                    var metaTags = [
+                    { property: 'og:title', content: 'Certification of Achievement - Firenor Academy' },
+                    { property: 'og:description', content: 'Earned a Certification of Achievement from Firenor Academy
+                    for successfully completing a course.' },
+                    { property: 'og:image', content: '/fn_academy/static/img/firenor-one_seagreen.png' },
+                    { property: 'og:type', content: 'article' },
+                    { property: 'og:url', content: window.location.href }
+                    ];
+
+                    metaTags.forEach(function(tag) {
+                    var metaElement = document.createElement('meta');
+                    metaElement.setAttribute('property', tag.property);
+                    metaElement.setAttribute('content', tag.content);
+                    document.head.appendChild(metaElement);
+                    });
+                    })();
+                </script>
                 <t t-foreach="docs" t-as="user_input">
                     <!-- Certification Layout -->
                     <t t-set="layout_values"
@@ -13,20 +33,20 @@
                          t-attf-class="#{'article certification-wrapper ' + layout_template + ' ' + layout_color}">
                         <style>
                             @font-face {
-                                font-family: 'Square721BT';
-                                src: url('/fn_academy/static/fonts/square_721_bt.ttf') format('truetype');
-                                font-weight: normal;
-                                font-style: normal;
+                            font-family: 'Square721BT';
+                            src: url('/fn_academy/static/fonts/square_721_bt.ttf') format('truetype');
+                            font-weight: normal;
+                            font-style: normal;
                             }
                             .fn_font {
-                                font-family: 'Square721BT' !important;
+                            font-family: 'Square721BT' !important;
                             }
                             .firenor-one {
-                                background-color: #ffffff !important;
-                                background: url(/fn_academy/static/img/firenor-one_seagreen.png);
-                                background-size: cover;
-                                text-align: center;
-                                overflow: hidden;
+                            background-color: #ffffff !important;
+                            background: url(/fn_academy/static/img/firenor-one_seagreen.png);
+                            background-size: cover;
+                            text-align: center;
+                            overflow: hidden;
                             }
                         </style>
 
@@ -55,12 +75,20 @@
                                 <div class="col-12 px-5 my-1">
                                     <p class="mx-2" t-if="user_input.scoring_success">
                                         For successfully completing
-                                        <t t-esc="user_input.survey_id.display_name"/>.<br/>
-                                        Your dedication, perseverance, and hard work have not only earned you this certification but also reflect your commitment to excellence. This accomplishment demonstrates your ability to rise to challenges and excel, and we look forward to witnessing your continued success in future endeavors.
+                                        <t t-esc="user_input.survey_id.display_name"/>.
+                                        <br/>
+                                        Your dedication, perseverance, and hard work have not only earned you this
+                                        certification but also reflect your commitment to excellence. This
+                                        accomplishment demonstrates your ability to rise to challenges and excel, and we
+                                        look forward to witnessing your continued success in future endeavors.
                                     </p>
                                     <p class="mx-1" t-else=" ">
-                                        For taking the <t t-esc="user_input.survey_id.display_name"/>.<br/>
-                                        Your dedication, perseverance, and hard work have not only earned you this certification but also reflect your commitment to excellence. This accomplishment demonstrates your ability to rise to challenges and excel, and we look forward to witnessing your continued success in future endeavors.
+                                        For taking the<t t-esc="user_input.survey_id.display_name"/>.
+                                        <br/>
+                                        Your dedication, perseverance, and hard work have not only earned you this
+                                        certification but also reflect your commitment to excellence. This
+                                        accomplishment demonstrates your ability to rise to challenges and excel, and we
+                                        look forward to witnessing your continued success in future endeavors.
                                     </p>
                                 </div>
                             </div>
