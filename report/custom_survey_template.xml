@@ -2,26 +2,20 @@
     <template id="certification_report_view" inherit_id="survey.certification_report_view" priority="20">
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
-                <!-- JavaScript to dynamically add Open Graph tags for LinkedIn sharing -->
-                <script type="text/javascript">
-                    (function() {
-                    var metaTags = [
-                    { property: 'og:title', content: 'Certification of Achievement - Firenor Academy' },
-                    { property: 'og:description', content: 'Earned a Certification of Achievement from Firenor Academy
-                    for successfully completing a course.' },
-                    { property: 'og:image', content: '/fn_academy/static/img/firenor-one_seagreen.png' },
-                    { property: 'og:type', content: 'article' },
-                    { property: 'og:url', content: window.location.href }
-                    ];
+                <!-- Open Graph Metadata for LinkedIn -->
+                <div style="display:none;">
+                    <meta property="og:title" content="Certification of Achievement - Firenor Academy"/>
+                    <meta property="og:description" content="Earned a Certification of Achievement from Firenor Academy for successfully completing a course."/>
+                    <meta property="og:image" content="/fn_academy/static/img/firenor-one_seagreen.png"/>
+                    <meta property="og:type" content="article"/>
+                    <meta property="og:url" t-att-content="request.httprequest.url"/>
+                </div>
 
-                    metaTags.forEach(function(tag) {
-                    var metaElement = document.createElement('meta');
-                    metaElement.setAttribute('property', tag.property);
-                    metaElement.setAttribute('content', tag.content);
-                    document.head.appendChild(metaElement);
-                    });
-                    })();
-                </script>
+                <!-- Visible Image Tag for Social Media Sharing -->
+                <div style="display:none;">
+                    <img src="/fn_academy/static/img/firenor-one_seagreen.png" alt="Certification Preview" />
+                </div>
+
                 <t t-foreach="docs" t-as="user_input">
                     <!-- Certification Layout -->
                     <t t-set="layout_values"
