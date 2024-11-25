@@ -6,13 +6,13 @@
                 <div style="display:none;">
                     <meta property="og:title" content="Certification of Achievement - Firenor Academy"/>
                     <meta property="og:description" content="Earned a Certification of Achievement from Firenor Academy for successfully completing a course."/>
-                    <meta name="image" property="og:image" content="/fn_academy/static/img/firenor-one_seagreen.png"/>
+                    <meta name="image" property="og:image" content="https://firenor.academy/fn_academy/static/img/firenor-one_seagreen.png"/>
                     <meta property="og:type" content="article"/>
                     <meta property="og:url" t-att-content="request.httprequest.url"/>
                 </div>
 
                 <!-- Visible Image Tag for Social Media Sharing -->
-                <div ><!--style="display:none;"-->
+                <div style="display:none;">
                     <img src="/fn_academy/static/img/firenor-one_seagreen.png" alt="Certification Preview" />
                 </div>
 
