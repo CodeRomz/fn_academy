@@ -93,14 +93,14 @@
                     </div>
                 </div>
             </t>
-        </template> <!--Block List Detail Page-->
+        </template>
     </data>
 
 
-    <record id="wh_catalogue_list_page" model="website.page">
+<!--    <record id="fna_certification_web_page" model="website.page">
         <field name="name">Certification</field>
         <field name="website_published">True</field>
         <field name="url">/fna/certification/web/</field>
         <field name="view_id" ref="list"/>
-    </record>
+    </record>-->
 </odoo>

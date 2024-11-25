@@ -19,7 +19,7 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         # 'views/views.xml',
         # 'report/report.xml',
         'security/fn_acad_security_rules.xml',
