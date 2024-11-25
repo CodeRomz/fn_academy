@@ -23,31 +23,3 @@ class SurveyCertificateController(http.Controller):
             'share_url': f"{request.httprequest.host_url}fna/certification/{user_input_id}",
         }
         return request.render('survey.certification_report_view', values)
-
-    @http.route('/fna/certification/web/<int:user_input_id>/', auth='public', website=True)
-    def view_web_certificate(self, user_input_id, **kwargs):
-        """
-        Render the certification page for the given user_input_id.
-        """
-
-        # Log the attempt to fetch the user input
-        _logger.info(f"Attempting to fetch user input with ID: {user_input_id}")
-
-        # Fetch the survey response
-        user_input = request.env['survey.user_input'].sudo().browse(user_input_id)
-
-        # Ensure the record exists
-        if not user_input.exists():
-            _logger.warning(f"User input with ID {user_input_id} not found.")
-            return request.not_found()
-
-        # Prepare rendering values
-        values = {
-            'user_input': user_input,
-        }
-
-        # Log the successful fetching of the user input
-        _logger.info(f"Successfully fetched user input: {user_input}")
-
-        # Render the certification page using the custom template
-        return request.render('survey.certification_web_view', values)
