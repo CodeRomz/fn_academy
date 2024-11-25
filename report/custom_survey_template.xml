@@ -13,7 +13,7 @@
 
                 <!-- Visible Image Tag for Social Media Sharing -->
                 <div style="display:none;">
-                    <img src="/fn_academy/static/img/firenor-one_seagreen.png" alt="Certification Preview" />
+                    <img src="https://firenor.academy/fn_academy/static/img/firenor-one_seagreen.png" alt="Certification Preview" />
                 </div>
 
                 <t t-foreach="docs" t-as="user_input">
