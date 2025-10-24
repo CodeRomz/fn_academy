@@ -8,6 +8,6 @@
     </record>
 
     <record id="website_slides.menu_root" model="ir.ui.menu">
-        <field name="groups_id" eval="[(4, ref('group_website_slides_officer_readonly'))]"/>
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
     </record>
 </odoo>
