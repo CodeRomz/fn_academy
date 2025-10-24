@@ -1,8 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="group_website_slides_officer_readonly" model="res.groups">
-        <field name="name">Officer (Read-Only)</field>
-        <field name="category_id" ref="website_slides.module_category_website_elearning"/>
-        <field name="implied_ids" eval="[]"/>
-    </record>
+    <data noupdate="1">
+        <!-- New Read-Only Officer Group -->
+        <record id="group_website_slides_officer_readonly" model="res.groups">
+            <field name="name">Officer (Read-Only)</field>
+            <field name="category_id" ref="website_slides.module_category_website_elearning"/>
+            <field name="implied_ids" eval="[]"/>
+        </record>
+
+        <!-- Optional: Add menu access for eLearning -->
+        <record id="website_slides.menu_root" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
+        </record>
+    </data>
 </odoo>
