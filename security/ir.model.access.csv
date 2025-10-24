@@ -2,9 +2,8 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_survey_user_input_public,survey.user_input.public,model_survey_user_input,base.group_public,0,0,0,0
 access_survey_survey_public,survey.survey.public,model_survey_survey,base.group_public,0,0,0,0
 
-access_slide_channel_readonly,slide.channel.readonly,website_slides.model_slide_channel,fn_academy.group_website_slides_officer_readonly,1,0,0,0
-access_slide_slide_readonly,slide.slide.readonly,website_slides.model_slide_slide,fn_academy.group_website_slides_officer_readonly,1,0,0,0
-access_slide_channel_partner_readonly,slide.channel.partner.readonly,website_slides.model_slide_channel_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0
-access_slide_slide_partner_readonly,slide.slide.partner.readonly,website_slides.model_slide_slide_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0
-access_slide_question_readonly,slide.question.readonly,website_slides.model_slide_question,fn_academy.group_website_slides_officer_readonly,1,0,0,0
-access_survey_survey_readonly,survey.survey.readonly,survey.model_survey_survey,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_channel_ro,slide.channel.readonly,website_slides.model_slide_channel,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_slide_ro,slide.slide.readonly,website_slides.model_slide_slide,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_channel_partner_ro,slide.channel.partner.readonly,website_slides.model_slide_channel_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_slide_partner_ro,slide.slide.partner.readonly,website_slides.model_slide_slide_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_question_ro,slide.question.readonly,website_slides.model_slide_question,fn_academy.group_website_slides_officer_readonly,1,0,0,0

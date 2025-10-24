@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <!-- New Read-Only Officer Group -->
+
+        <!-- New eLearning read-only internal group -->
         <record id="group_website_slides_officer_readonly" model="res.groups">
             <field name="name">Officer (Read-Only)</field>
+            <!-- Use the eLearning category defined by website_slides -->
             <field name="category_id" ref="website_slides.module_category_website_elearning"/>
+            <!-- IMPORTANT: don't imply Officer or Website Publisher -->
             <field name="implied_ids" eval="[]"/>
         </record>
 
-        <!-- Grant menu visibility to new group -->
+        <!-- Give this group access to the eLearning backend menu -->
         <record id="website_slides.menu_root" model="ir.ui.menu">
             <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
         </record>
