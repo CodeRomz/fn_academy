@@ -19,9 +19,9 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
         'security/fn_acad_security_rules.xml',
         'security/fn_acad_security_groups.xml',
+        'security/ir.model.access.csv',
         'views/res_users.xml',
         'views/survey_user_views.xml',
         'report/custom_survey_template.xml',
