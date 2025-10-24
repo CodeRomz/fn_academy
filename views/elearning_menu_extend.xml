@@ -1,50 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-    <!-- ===== MENUS (append RO group) ===== -->
-
-    <!-- Root eLearning app -->
-    <record id="website_slides_menu_root" model="ir.ui.menu">
+    <!-- MENUS (append RO group) -->
+    <record id="website_slides.menu_website_slides_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
+    </record>
+    <record id="website_slides.menu_action_slide_channels" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
+    </record>
+    <record id="website_slides.submenu_action_slides_slides" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
+    </record>
+    <record id="website_slides.menu_slide_tag" model="ir.ui.menu">
         <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
     </record>
 
-    <!-- Common submenus found in website_slides -->
-    <!-- Lessons list (submenu bound to slide_slide_action) -->
-    <record id="submenu_action_slides_slides" model="ir.ui.menu">
+    <!-- ACTIONS (append RO group) -->
+    <record id="website_slides.action_slide_channels" model="ir.actions.act_window">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
+    </record>
+    <record id="website_slides.action_slides_slides" model="ir.actions.act_window">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
+    </record>
+    <record id="website_slides.action_slide_tag" model="ir.actions.act_window">
         <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
     </record>
 
-    <!-- Categories submenu -->
-    <record id="menu_action_ir_slide_category" model="ir.ui.menu">
+    <!-- If your DB really has Categories, uncomment these two: -->
+    <!--
+    <record id="website_slides.menu_action_ir_slide_category" model="ir.ui.menu">
         <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
     </record>
-
-    <!-- Tags submenu -->
-    <record id="menu_slide_tag" model="ir.ui.menu">
-        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-    </record>
-
-    <!-- Optional: Reporting submenu (if present in your DB) -->
-    <record id="menu_slides_reporting" model="ir.ui.menu">
-        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-    </record>
-
-    <!-- ===== ACTIONS (append RO group just in case actions themselves restrict groups) ===== -->
-
-    <record id="website_slides.slide_slide_action" model="ir.actions.act_window">
-        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-    </record>
-
-    <record id="website_slides.slide_channel_action_overview" model="ir.actions.act_window">
-        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-    </record>
-
-    <record id="website_slides.slide_channel_tag_action" model="ir.actions.act_window">
-        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-    </record>
-
     <record id="website_slides.action_ir_slide_category" model="ir.actions.act_window">
         <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
     </record>
-
+    -->
 </odoo>

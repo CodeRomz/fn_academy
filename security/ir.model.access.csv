@@ -4,7 +4,6 @@ access_survey_survey_public,survey.survey.public,model_survey_survey,base.group_
 
 access_slide_channel_ro,slide.channel.ro,website_slides.model_slide_channel,fn_academy.group_website_slides_officer_readonly,1,0,0,0
 access_slide_ro,slide.slide.ro,website_slides.model_slide_slide,fn_academy.group_website_slides_officer_readonly,1,0,0,0
-access_slide_category_ro,slide.category.ro,website_slides.model_slide_category,fn_academy.group_website_slides_officer_readonly,1,0,0,0
 access_slide_tag_ro,slide.tag.ro,website_slides.model_slide_tag,fn_academy.group_website_slides_officer_readonly,1,0,0,0
 access_slide_channel_partner_ro,slide.channel.partner.ro,website_slides.model_slide_channel_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0
 access_slide_slide_partner_ro,slide.slide.partner.ro,website_slides.model_slide_slide_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0

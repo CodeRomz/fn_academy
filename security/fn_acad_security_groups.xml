@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Put the RO group in a neutral, non-exclusive category (Usability/Extra Rights) -->
+    <!-- eLearning Officer (Read-Only) shown under the eLearning app -->
     <record id="group_website_slides_officer_readonly" model="res.groups">
         <field name="name">Officer (Read-Only)</field>
-        <field name="category_id" ref="base.module_category_usability"/>
-        <!-- Keep users as internal, but DO NOT imply eLearning Officer/Manager -->
+        <field name="category_id" ref="base.module_category_website_elearning"/>
+        <!-- keep independent; do NOT imply Officer/Manager -->
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+
     </record>
 </odoo>
