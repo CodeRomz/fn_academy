@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="group_website_slides_officer_readonly" model="res.groups">
-        <field name="name">Officer (Read-Only)</field>
-        <!-- Correct eLearning category -->
-        <field name="category_id" ref="base.module_category_website_elearning"/>
-        <field name="implied_ids" eval="[]"/>
-    </record>
+    <!--    <record id="group_website_slides_officer_readonly" model="res.groups">
+            <field name="name">Officer (Read-Only)</field>
+            &lt;!&ndash; Correct eLearning category &ndash;&gt;
+            <field name="category_id" ref="base.module_category_website_elearning"/>
+            <field name="implied_ids" eval="[]"/>
+        </record>-->
 
-<!--    <record id="website_slides.menu_root" model="ir.ui.menu">
-        <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-    </record>-->
+        <!-- eLearning Officer (Read-Only) in a non-exclusive category -->
+        <record id="group_elearning_officer_readonly" model="res.groups">
+            <field name="name">eLearning Officer (Read-Only)</field>
+            <!-- Neutral category so it won't be mutually exclusive with Officer/Manager -->
+            <field name="category_id" ref="base.module_category_usability"/>
+            <!-- Internal user rights, but DO NOT imply eLearning Officer -->
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Back-office read-only visibility for eLearning backend.</field>
+        </record>
+
+
 </odoo>

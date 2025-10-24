@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Root eLearning app menu -->
+    <record id="website_slides_menu_root" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_elearning_officer_readonly'))]"/>
+    </record>
+
+    <!-- Courses/Slides list submenu -->
+    <record id="submenu_action_slides_slides" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_elearning_officer_readonly'))]"/>
+    </record>
+
+    <!-- Categories (course categories) -->
+    <record id="menu_action_ir_slide_category" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_elearning_officer_readonly'))]"/>
+    </record>
+
+    <!-- Tags -->
+    <record id="menu_slide_tag" model="ir.ui.menu">
+        <field name="groups_id" eval="[(4, ref('fn_academy.group_elearning_officer_readonly'))]"/>
+    </record>
+</odoo>
