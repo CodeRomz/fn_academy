@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_website_slides_officer_readonly" model="res.groups">
+        <field name="name">Officer (Read Only)</field>
+        <field name="category_id" ref="base.module_category_website"/>
+        <!-- Ensure internal-user context; DO NOT imply Officer/Manager -->
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="website_slides.group_website_slides_officer" model="res.groups">
+        <field name="implied_ids"
+               eval="[(4, ref('website_slides_officer_readonly.group_website_slides_officer_readonly'))]"/>
+    </record>
+
+</odoo>
