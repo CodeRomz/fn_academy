@@ -2,8 +2,7 @@
 <odoo>
   <record id="group_website_slides_officer_readonly" model="res.groups">
     <field name="name">Officer (Read-Only)</field>
-    <!-- Correct eLearning category -->
     <field name="category_id" ref="base.module_category_website_elearning"/>
-    <field name="implied_ids" eval="[]"/>
+    <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
   </record>
 </odoo>
