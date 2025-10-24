@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!--    <record id="group_website_slides_officer_readonly" model="res.groups">
-            <field name="name">Officer (Read-Only)</field>
-            &lt;!&ndash; Correct eLearning category &ndash;&gt;
-            <field name="category_id" ref="base.module_category_website_elearning"/>
-            <field name="implied_ids" eval="[]"/>
-        </record>-->
-
-        <!-- eLearning Officer (Read-Only) in a non-exclusive category -->
-        <record id="group_elearning_officer_readonly" model="res.groups">
-            <field name="name">eLearning Officer (Read-Only)</field>
-            <!-- Neutral category so it won't be mutually exclusive with Officer/Manager -->
-            <field name="category_id" ref="base.module_category_usability"/>
-            <!-- Internal user rights, but DO NOT imply eLearning Officer -->
-            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
-            <field name="comment">Back-office read-only visibility for eLearning backend.</field>
-        </record>
-
-
+    <!-- Put the RO group in a neutral, non-exclusive category (Usability/Extra Rights) -->
+    <record id="group_website_slides_officer_readonly" model="res.groups">
+        <field name="name">Officer (Read-Only)</field>
+        <field name="category_id" ref="base.module_category_usability"/>
+        <!-- Keep users as internal, but DO NOT imply eLearning Officer/Manager -->
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
 </odoo>

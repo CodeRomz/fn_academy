@@ -2,11 +2,11 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_survey_user_input_public,survey.user_input.public,model_survey_user_input,base.group_public,0,0,0,0
 access_survey_survey_public,survey.survey.public,model_survey_survey,base.group_public,0,0,0,0
 
-acc_slide_channel_ro,slide.channel.ro,website_slides.model_slide_channel,fn_academy.group_elearning_officer_readonly,1,0,0,0
-acc_slide_ro,slide.slide.ro,website_slides.model_slide_slide,fn_academy.group_elearning_officer_readonly,1,0,0,0
-acc_slide_category_ro,slide.category.ro,website_slides.model_slide_category,fn_academy.group_elearning_officer_readonly,1,0,0,0
-acc_slide_tag_ro,slide.tag.ro,website_slides.model_slide_tag,fn_academy.group_elearning_officer_readonly,1,0,0,0
-acc_slide_channel_partner_ro,slide.channel.partner.ro,website_slides.model_slide_channel_partner,fn_academy.group_elearning_officer_readonly,1,0,0,0
-acc_slide_slide_partner_ro,slide.slide.partner.ro,website_slides.model_slide_slide_partner,fn_academy.group_elearning_officer_readonly,1,0,0,0
-acc_slide_question_ro,slide.question.ro,website_slides.model_slide_question,fn_academy.group_elearning_officer_readonly,1,0,0,0
-acc_slide_answer_ro,slide.answer.ro,website_slides.model_slide_answer,fn_academy.group_elearning_officer_readonly,1,0,0,0
+access_slide_channel_ro,slide.channel.ro,website_slides.model_slide_channel,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_ro,slide.slide.ro,website_slides.model_slide_slide,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_category_ro,slide.category.ro,website_slides.model_slide_category,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_tag_ro,slide.tag.ro,website_slides.model_slide_tag,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_channel_partner_ro,slide.channel.partner.ro,website_slides.model_slide_channel_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_slide_partner_ro,slide.slide.partner.ro,website_slides.model_slide_slide_partner,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_question_ro,slide.question.ro,website_slides.model_slide_question,fn_academy.group_website_slides_officer_readonly,1,0,0,0
+access_slide_answer_ro,slide.answer.ro,website_slides.model_slide_answer,fn_academy.group_website_slides_officer_readonly,1,0,0,0
