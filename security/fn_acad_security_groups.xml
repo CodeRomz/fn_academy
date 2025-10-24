@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <!-- Read-only Officer for eLearning -->
   <record id="group_website_slides_officer_readonly" model="res.groups">
     <field name="name">Officer (Read-Only)</field>
-    <!-- Use the eLearning category if available; requires depends on website_slides -->
-    <field name="category_id" ref="website_slides.module_category_website_slides"/>
+    <!-- Correct eLearning category -->
+    <field name="category_id" ref="base.module_category_website_elearning"/>
     <field name="implied_ids" eval="[]"/>
   </record>
 </odoo>
