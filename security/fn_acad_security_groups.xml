@@ -9,17 +9,17 @@
         <field name="sequence">5</field>
     </record>
 
-    <!-- Make the existing Officer imply the new Read-Only group (build the ladder) -->
+<!--    &lt;!&ndash; Make the existing Officer imply the new Read-Only group (build the ladder) &ndash;&gt;
     <record id="website_slides.group_website_slides_officer" model="res.groups">
         <field name="implied_ids" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-        <!-- optional: keep Officer above RO -->
+        &lt;!&ndash; optional: keep Officer above RO &ndash;&gt;
         <field name="sequence">10</field>
     </record>
 
-    <!-- Manager already implies Officer in core; sequence just to keep order (optional) -->
+    &lt;!&ndash; Manager already implies Officer in core; sequence just to keep order (optional) &ndash;&gt;
     <record id="website_slides.group_website_slides_manager" model="res.groups">
         <field name="sequence">20</field>
-    </record>
+    </record>-->
 
 
     <record id="website_slides.menu_root" model="ir.ui.menu">
