@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- New eLearning read-only officer group -->
     <record id="group_website_slides_officer_readonly" model="res.groups">
         <field name="name">Officer (Read-Only)</field>
+        <!-- Correct eLearning category -->
         <field name="category_id" ref="base.module_category_website_elearning"/>
         <field name="implied_ids" eval="[]"/>
-        <!-- optional: ensure it's shown first -->
-        <field name="sequence">5</field>
     </record>
-
-<!--    &lt;!&ndash; Make the existing Officer imply the new Read-Only group (build the ladder) &ndash;&gt;
-    <record id="website_slides.group_website_slides_officer" model="res.groups">
-        <field name="implied_ids" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
-        &lt;!&ndash; optional: keep Officer above RO &ndash;&gt;
-        <field name="sequence">10</field>
-    </record>
-
-    &lt;!&ndash; Manager already implies Officer in core; sequence just to keep order (optional) &ndash;&gt;
-    <record id="website_slides.group_website_slides_manager" model="res.groups">
-        <field name="sequence">20</field>
-    </record>-->
-
 
     <record id="website_slides.menu_root" model="ir.ui.menu">
         <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
