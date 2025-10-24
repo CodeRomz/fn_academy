@@ -3,7 +3,7 @@
         <record id="group_website_slides_officer_readonly" model="res.groups">
             <field name="name">Officer (Read-Only)</field>
             <field name="category_id" ref="website_slides.module_category_website_slides"/>
-            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="implied_ids" eval="[]"/>
         </record>
 
         <record id="website_slides.menu_root" model="ir.ui.menu">
