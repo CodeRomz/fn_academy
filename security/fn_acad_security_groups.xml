@@ -1,15 +1,11 @@
 <odoo>
     <data>
-        <!-- New read-only group under the same eLearning category -->
         <record id="group_website_slides_officer_readonly" model="res.groups">
             <field name="name">Officer (Read-Only)</field>
-            <!-- Use the eLearning category defined by website_slides -->
             <field name="category_id" ref="website_slides.module_category_website_slides"/>
-            <!-- Do NOT imply officer or website publisher -->
-            <field name="implied_ids" eval="[]"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
         </record>
 
-        <!-- Give access to the eLearning backend menu -->
         <record id="website_slides.menu_root" model="ir.ui.menu">
             <field name="groups_id" eval="[(4, ref('fn_academy.group_website_slides_officer_readonly'))]"/>
         </record>
