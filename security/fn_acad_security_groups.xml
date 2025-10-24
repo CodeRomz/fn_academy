@@ -1,14 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- New read-only officer group under the eLearning category -->
-    <record id="group_website_slides_officer_readonly" model="res.groups">
-        <field name="name">Officer (Read-Only)</field>
-        <!-- Correct category external ID for eLearning -->
-        <field name="category_id" ref="base.module_category_website_elearning"/>
-        <!-- No implied_ids: it must NOT inherit write rights from the default officer -->
-        <field name="implied_ids" eval="[]"/>
-    </record>
-
-    <!-- (Optional) Make the group visible from the eLearning top menu by adding it on menus/actions if you need menu gating.
-         If you just want read-only ACLs, you can skip menu group bindings. -->
+  <!-- Read-only Officer for eLearning -->
+  <record id="group_website_slides_officer_readonly" model="res.groups">
+    <field name="name">Officer (Read-Only)</field>
+    <!-- Use the eLearning category if available; requires depends on website_slides -->
+    <field name="category_id" ref="website_slides.module_category_website_slides"/>
+    <field name="implied_ids" eval="[]"/>
+  </record>
 </odoo>
