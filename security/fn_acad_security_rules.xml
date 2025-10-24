@@ -12,7 +12,7 @@
             <field name="perm_unlink" eval="False"/>
         </record>
 
-        <record id="website_slides.rule_slide_channel_officer_read_all_ro" model="ir.rule">
+<!--        <record id="website_slides.rule_slide_channel_officer_read_all_ro" model="ir.rule">
             <field name="name">Channel: RO read all</field>
             <field name="model_id" ref="website_slides.model_slide_channel"/>
             <field name="domain_force">[(1,'=',1)]</field>
@@ -21,6 +21,6 @@
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_unlink" eval="False"/>
-        </record>
+        </record>-->
     </data>
 </odoo>
