@@ -21,7 +21,5 @@
             <field name="binding_type">report</field>
         </record>
 
-
-
     </data>
 </odoo>
