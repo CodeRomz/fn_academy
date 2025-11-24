@@ -19,14 +19,14 @@
 
     # always loaded
     'data': [
-        'security/fn_acad_security_groups.xml',
-        'security/fn_acad_security_rules.xml',
+        # 'security/fn_acad_security_groups.xml',
+        # 'security/fn_acad_security_rules.xml',
         'security/ir.model.access.csv',
         'views/res_users.xml',
         'views/survey_user_views.xml',
         # 'views/elearning_menu_extend.xml',
         'report/custom_survey_template.xml',
-        'report/custom_survey_hr_emp_ack_template',
+        'report/custom_survey_hr_emp_ack_template.xml',
         'report/custom_survey_reports.xml',
     ],
     'installable': True,
