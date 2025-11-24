@@ -53,9 +53,11 @@
                                         </table>
                                     </div>
                                     <div class="col-6">
-                                        <h1>
-                                            <t t-esc="user_input.partner_id.name or user_input.email"/>
-                                        </h1>
+                                        <img t-if="o.company_id.logo"
+                                             t-att-src="image_data_uri(o.company_id.logo)"
+                                             alt="Company Logo"
+                                             style="max-height: 100px; max-width: 100%;"
+                                        />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -110,7 +112,7 @@
                                         </h6>
                                         <table class="table table-sm table-borderless">
                                             <tr>
-                                                <td class="td-width-90">Name:</td>
+                                                <td class="td-width-110">Name:</td>
                                                 <td class="text-uppercase">
                                                     <t t-esc="user_input.partner_id.name"/>
                                                 </td>
