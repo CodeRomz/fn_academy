@@ -22,6 +22,10 @@
                                 p{
                                 text-align: justify;
                                 }
+                                .td-width-90 {
+                                width: 90px !important;
+                                max-width: 90px !important;
+                                }
                             </style>
 
                             <div class="container fn_font">
@@ -89,8 +93,8 @@
                                         </h6>
                                         <table class="table table-sm table-borderless">
                                             <tr>
-                                                <td class="w-10">Name:</td>
-                                                <td class="text-uppercase w-90">
+                                                <td class="td-width-90">Name:</td>
+                                                <td class="text-uppercase">
                                                     <t t-esc="user_input.partner_id.name"/>
                                                 </td>
                                             </tr>
