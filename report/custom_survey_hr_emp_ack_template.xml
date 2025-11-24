@@ -16,7 +16,7 @@
                                 .fn_font {
                                 font-family: 'Square721BT' !important;
                                 }
-                                h5 {
+                                h6 {
                                 color: #47a5ae !important;
                                 }
                                 p{
@@ -39,9 +39,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        <h5>
+                                        <h6>
                                             Employee Receipt and Acceptance
-                                        </h5>
+                                        </h6>
                                         <p class="mb-4">
                                             I hereby acknowledge that I have received a copy of the FNI Consulting
                                             LLC Employee Handbook. I understand that it is my ongoing responsibility
@@ -57,9 +57,9 @@
                                             policies and procedures outlined in the Handbook. I further agree to
                                             return the Handbook upon termination of my employment with the Company.
                                         </p>
-                                        <h5>
+                                        <h6>
                                             Confidentiality Agreement
-                                        </h5>
+                                        </h6>
                                         <p class="mb-4">
                                             I understand that during my employment with FNI Consulting LLC (“the
                                             Company”), I may have access to non-public, proprietary, or confidential
@@ -84,9 +84,9 @@
                                             By signing below, I confirm that I have read, understood, and agree to
                                             abide by the terms of this Confidentiality Agreement.
                                         </p>
-                                        <h5 class="mb-2">
+                                        <h6 class="mb-3">
                                             Employee Acknowledgement
-                                        </h5>
+                                        </h6>
                                         <table class="table table-sm table-borderless">
                                             <tr>
                                                 <td class="w-10">Name:</td>
