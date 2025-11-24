@@ -53,8 +53,8 @@
                                         </table>
                                     </div>
                                     <div class="col-6">
-                                        <img t-if="user_input.company_id.logo"
-                                             t-att-src="image_data_uri(o.company_id.logo)"
+                                        <img t-if="res_company.logo"
+                                             t-att-src="image_data_uri(res_company.logo)"
                                              alt="Company Logo"
                                              style="max-height: 100px; max-width: 100%;"
                                         />
