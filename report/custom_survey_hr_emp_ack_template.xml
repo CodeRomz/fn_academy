@@ -90,7 +90,7 @@
                                         <table class="table table-sm table-borderless">
                                             <tr>
                                                 <td class="w-10">Name:</td>
-                                                <td class="w-90">
+                                                <td class="text-uppercase w-90">
                                                     <t t-esc="user_input.partner_id.name"/>
                                                 </td>
                                             </tr>
@@ -102,7 +102,7 @@
                                             <tr>
                                                 <td>Date:</td>
                                                 <td>
-                                                    <t t-esc="user_input.create_date.strftime('%d-%b-%Y')/>
+                                                    <t t-esc="user_input.create_date.strftime('%d-%b-%Y')"/>
                                                 </td>
                                             </tr>
                                             <tr>
