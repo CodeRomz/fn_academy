@@ -82,7 +82,7 @@
                                         <h5>
                                             Employee Acknowledgement
                                         </h5>
-                                        <table style="table table-borderless">
+                                        <table class="table table-sm table-borderless">
                                             <tr>
                                                 <td>Name:</td>
                                                 <td>
