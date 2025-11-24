@@ -22,7 +22,6 @@
                                 p{
                                 text-align: justify;
                                 }
-
                             </style>
 
                             <div class="container fn_font">
@@ -86,25 +85,25 @@
                                         <table border="0" cellspacing="0" cellpadding="0"
                                                style="border-collapse: collapse;">
                                             <tr>
-                                                <td style="border: none; padding: 0; width: 33%;">Name:</td>
-                                                <td style="border: none; padding: 0; width: 33%;">
+                                                <td style="border: none !imortant; padding: 0;">Name:</td>
+                                                <td style="border: none !imortant; padding: 0;">
                                                     <t t-esc="user_input.partner_id.name"/>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="border: none; padding: 0;">Designation:</td>
-                                                <td style="border: none; padding: 0;">_____________________________
+                                                <td style="border: none !imortant; padding: 0;">Designation:</td>
+                                                <td style="border: none !imortant; padding: 0;">_____________________________
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="border: none; padding: 0;">Date:</td>
-                                                <td style="border: none; padding: 0;">
+                                                <td style="border: none !imortant; padding: 0;">Date:</td>
+                                                <td style="border: none !imortant; padding: 0;">
                                                     <t t-esc="user_input.create_date"/>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="border: none; padding: 0;">Signature:</td>
-                                                <td style="border: none; padding: 0;">_____________________________
+                                                <td style="border: none !imortant; padding: 0;">Signature:</td>
+                                                <td style="border: none !imortant; padding: 0;">_____________________________
                                                 </td>
                                             </tr>
                                         </table>
