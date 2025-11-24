@@ -9,5 +9,4 @@ class Survey(models.Model):
                                 ('fni-ack_o', 'HR Emp Acknowledgement')
                                 ],
         string='Certification Template',
-        default='firenor-one_seagreen'
     )
