@@ -63,7 +63,7 @@
                                         look forward to witnessing your continued success in future endeavors.
                                     </p>
                                     <p class="mx-1" t-else=" ">
-                                        For taking the <t t-esc="user_input.survey_id.display_name"/>.
+                                        For taking the<t t-esc="user_input.survey_id.display_name"/>.
                                         <br/>
                                         Your dedication, perseverance, and hard work have not only earned you this
                                         certification but also reflect your commitment to excellence. This
