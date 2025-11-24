@@ -79,13 +79,13 @@
                                             By signing below, I confirm that I have read, understood, and agree to
                                             abide by the terms of this Confidentiality Agreement.
                                         </p>
-                                        <h5>
+                                        <h5 class="mb-5">
                                             Employee Acknowledgement
                                         </h5>
                                         <table class="table table-sm table-borderless">
                                             <tr>
-                                                <td>Name:</td>
-                                                <td>
+                                                <td class="w-25">Name:</td>
+                                                <td lass="w-75">
                                                     <t t-esc="user_input.partner_id.name"/>
                                                 </td>
                                             </tr>
