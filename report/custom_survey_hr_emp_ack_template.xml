@@ -22,18 +22,40 @@
                                 p{
                                 text-align: justify;
                                 }
-                                .td-width-90 {
-                                width: 90px !important;
-                                max-width: 90px !important;
+                                .td-width-110 {
+                                width: 110px !important;
+                                max-width: 110px !important;
                                 }
                             </style>
 
                             <div class="container fn_font">
                                 <div class="row">
                                     <div class="col-6">
-                                        <h1>
-                                            <t t-esc="user_input.partner_id.name or user_input.email"/>
-                                        </h1>
+                                        <table class="table table-sm table-borderless">
+                                            <tr>
+                                                <td>Doc. Title:</td>
+                                                <td>
+                                                    Employee Handbook
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Doc No.:</td>
+                                                <td>
+                                                    FAE-HRE-PL-0037
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Revision</td>
+                                                <td>
+                                                    R1
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Signature:</td>
+                                                <td>_____________________________
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
                                     <div class="col-6">
                                         <h1>
@@ -120,7 +142,6 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
-
                                     </div>
                                 </div>
                             </div>
