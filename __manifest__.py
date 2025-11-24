@@ -25,6 +25,7 @@
         'views/survey_user_views.xml',
         'report/custom_survey_template.xml',
         'report/custom_survey_reports.xml',
+        'report/custom_survey_hr_emp_ack_template.xml',
     ],
     'installable': True,
     'application': True,
