@@ -82,27 +82,27 @@
                                         <h5>
                                             Employee Acknowledgement
                                         </h5>
-                                        <table style="table-borderless">
+                                        <table style="table table-sm table-borderless">
                                             <tr>
-                                                <td >Name:</td>
-                                                <td >
+                                                <td>Name:</td>
+                                                <td>
                                                     <t t-esc="user_input.partner_id.name"/>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td >Designation:</td>
-                                                <td >_____________________________
+                                                <td>Designation:</td>
+                                                <td>_____________________________
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td >Date:</td>
-                                                <td >
+                                                <td>Date:</td>
+                                                <td>
                                                     <t t-esc="user_input.create_date"/>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td >Signature:</td>
-                                                <td >_____________________________
+                                                <td>Signature:</td>
+                                                <td>_____________________________
                                                 </td>
                                             </tr>
                                         </table>
