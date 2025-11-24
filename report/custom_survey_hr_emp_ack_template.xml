@@ -42,7 +42,7 @@
                                         <h5>
                                             Employee Receipt and Acceptance
                                         </h5>
-                                        <p>
+                                        <p class="mb-3">
                                             I hereby acknowledge that I have received a copy of the FNI Consulting
                                             LLC Employee Handbook. I understand that it is my ongoing responsibility
                                             to read, familiarize myself with, and comply with its contents.
@@ -58,7 +58,7 @@
                                         <h5>
                                             Confidentiality Agreement
                                         </h5>
-                                        <p>
+                                        <p class="mb-3">
                                             I understand that during my employment with FNI Consulting LLC (“the
                                             Company”), I may have access to non-public, proprietary, or confidential
                                             information relating to the Company, its clients, suppliers, or business
@@ -79,7 +79,7 @@
                                             By signing below, I confirm that I have read, understood, and agree to
                                             abide by the terms of this Confidentiality Agreement.
                                         </p>
-                                        <h5 class="my-2">
+                                        <h5 class="mb-1">
                                             Employee Acknowledgement
                                         </h5>
                                         <table class="table table-sm table-borderless">
