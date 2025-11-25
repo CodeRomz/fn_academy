@@ -26,9 +26,12 @@
                                 width: 110px !important;
                                 max-width: 110px !important;
                                 }
+                                header_c{
+                                margin-top: -25px;
+                                }
                             </style>
 
-                            <div class="container fn_font">
+                            <div class="container fn_font header_c">
                                 <div class="row">
                                     <div class="col-6">
                                         <table class="table table-sm table-borderless">
