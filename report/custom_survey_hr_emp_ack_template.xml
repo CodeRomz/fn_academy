@@ -44,13 +44,13 @@
                                 .header-left {
                                 border-left: 1px solid #47a5ae;
                                 padding-right: 8px;
-                                width: 60%;
+                                width: 70%;
                                 }
 
                                 .header-right {
                                 border-left: 1px solid #47a5ae;
                                 text-align: right;
-                                width: 40%;
+                                width: 30%;
                                 }
 
                             </style>
