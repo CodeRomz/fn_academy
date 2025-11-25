@@ -47,7 +47,7 @@
                             </style>
 
                             <div class="page container fn_font ack-page">
-                                <div class="row header-row">
+                                <div class="row header-row mb-5">
                                     <div class="col-8" style="border-left: 1px solid #47a5ae !important;">
                                         <table class="table table-sm table-borderless">
                                             <tr>
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
 
-                                <div class="row mt-4">
+                                <div class="row">
                                     <div class="col">
                                         <h6>
                                             Employee Receipt and Acceptance
