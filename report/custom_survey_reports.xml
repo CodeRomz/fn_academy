@@ -6,17 +6,37 @@
             <field name="model">survey.user_input</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">survey.certification_report_view</field>
-            <field name="print_report_name">'Certification - %s - %s - %s' % (object.survey_id.display_name, object.partner_id.name, object.create_date.strftime('%Y-%m-%d')) </field>
+            <field name="print_report_name">'Certification - %s - %s - %s' % (object.survey_id.display_name,
+                object.partner_id.name, object.create_date.strftime('%Y-%m-%d'))
+            </field>
             <field name="binding_model_id" ref="survey.model_survey_user_input"/>
             <field name="binding_type">report</field>
         </record>
 
+
+
+
+        <record id="paperformat_hr_emp_ack" model="report.paperformat">
+            <field name="name">HR Employee Acknowledgement</field>
+            <field name="format">A4</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">10</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">2</field>
+            <field name="dpi">90</field>
+        </record>
+
         <record id="hr_emp_ack_report" model="ir.actions.report">
-            <field name="name">FNI Employee Acknowledgement</field>
+            <field name="name">HR Employee Acknowledgement</field>
             <field name="model">survey.user_input</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">fn_academy.hr_emp_ack_report_view</field>
-            <field name="print_report_name">'Acknowledgement - %s - %s - %s' % (object.survey_id.display_name, object.partner_id.name, object.create_date.strftime('%Y-%m-%d')) </field>
+            <field name="print_report_name">'Acknowledgement - %s - %s - %s' % (object.survey_id.display_name,
+                object.partner_id.name, object.create_date.strftime('%Y-%m-%d'))
+            </field>
+            <field name="paperformat_id" ref="paperformat_hr_emp_ack"/>
             <field name="binding_model_id" ref="survey.model_survey_user_input"/>
             <field name="binding_type">report</field>
         </record>

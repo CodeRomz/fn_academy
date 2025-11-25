@@ -26,13 +26,12 @@
                                 width: 110px !important;
                                 max-width: 110px !important;
                                 }
-                                .header_c{
-                                margin-top: -100px !important;
-                                z-index: 99999 !important;
+                                .ack-page{
+                                margin-top: 0px !important;
                                 }
                             </style>
 
-                            <div class="container fn_font header_c">
+                            <div class="page container fn_font .ack-page">
                                 <div class="row">
                                     <div class="col-6">
                                         <table class="table table-sm table-borderless">
