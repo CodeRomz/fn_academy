@@ -34,7 +34,7 @@
                             <div class="page container fn_font .ack-page">
                                 <div class="row align-items-center mb-5" style="border-left: 1px solid #47a5ae !important;">
                                     <div class="col-8">
-                                        <table class="table table-sm table-borderless">
+                                        <table class="table table-sm table-borderless mt-2">
                                             <tr>
                                                 <td class="td-width-110">Doc. Title:</td>
                                                 <td>
