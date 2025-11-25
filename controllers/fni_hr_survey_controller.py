@@ -15,17 +15,6 @@ _logger = logging.getLogger(__name__)
 
 
 class Survey(SurveyController):
-    """
-    Extend native survey controller to choose the report
-    based on survey.certification_report_layout:
-
-    - 'firenor-one_seagreen' -> survey.certification_report
-    - 'fni-ack_o-ack'        -> fn_academy.hr_emp_ack_report
-    """
-
-    # -------------------------------------------------------------------------
-    # Helper to pick the right report
-    # -------------------------------------------------------------------------
     def _get_certification_report_ref(self, user_input):
         survey = user_input.survey_id
         layout = survey.certification_report_layout or 'firenor-one_seagreen'
@@ -36,9 +25,6 @@ class Survey(SurveyController):
             report_ref = 'fn_academy.hr_emp_ack_report'
         return report_ref
 
-    # -------------------------------------------------------------------------
-    # OVERRIDE: core _generate_report
-    # -------------------------------------------------------------------------
     def _generate_report(self, user_input, download=True):
         """Generate certification PDF according to survey layout."""
         report_ref = self._get_certification_report_ref(user_input)
@@ -103,9 +89,6 @@ class Survey(SurveyController):
                 user_input.survey_id.certification_report_layout,
             )
 
-    # -------------------------------------------------------------------------
-    # OVERRIDE: Preview route (backend)
-    # -------------------------------------------------------------------------
     @http.route()
     def survey_get_certification_preview(self, survey, **kwargs):
         if not request.env.user.has_group('survey.group_survey_user'):
@@ -124,9 +107,6 @@ class Survey(SurveyController):
 
         return response
 
-    # -------------------------------------------------------------------------
-    # OVERRIDE: Download route (website)
-    # -------------------------------------------------------------------------
     @http.route()
     def survey_get_certification(self, survey_id, **kwargs):
         survey = request.env['survey.survey'].sudo().search(
