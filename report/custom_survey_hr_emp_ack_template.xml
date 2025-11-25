@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="hr_emp_ack_report_view" inherit_id="survey.certification_report_view" priority="20">
+        <template id="hr_emp_ack_report_view" priority="20">
             <t t-foreach="docs" t-as="user_input">
                 <t t-call="web.html_container">
                     <t t-call="web.basic_layout">
