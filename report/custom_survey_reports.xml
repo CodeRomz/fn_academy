@@ -37,6 +37,7 @@
                 object.partner_id.name,
                 object.create_date.strftime('%d-%b-%Y')
                 )
+
             </field>
             <field name="paperformat_id" ref="paperformat_hr_emp_ack"/>
             <field name="binding_model_id" ref="survey.model_survey_user_input"/>
