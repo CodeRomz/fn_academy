@@ -36,7 +36,7 @@
                                     <div class="col-8">
                                         <table class="table table-sm table-borderless">
                                             <tr>
-                                                <td>Doc. Title:</td>
+                                                <td class="td-width-110">Doc. Title:</td>
                                                 <td>
                                                     Employee Handbook
                                                 </td>
