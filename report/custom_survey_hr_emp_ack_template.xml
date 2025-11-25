@@ -26,7 +26,7 @@
                                 width: 110px !important;
                                 max-width: 110px !important;
                                 }
-                                header_c{
+                                .header_c{
                                 margin-top: -200px;
                                 }
                             </style>
