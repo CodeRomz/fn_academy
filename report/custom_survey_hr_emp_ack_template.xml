@@ -48,7 +48,7 @@
 
                                 .header-left {
                                 border-left: 1px solid #47a5ae;
-                                margin-top: 8px;
+                                margin-top: 15px;
                                 padding-left: 8px;
                                 width: 70%;
                                 }
