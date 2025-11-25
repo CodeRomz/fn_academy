@@ -1,4 +1,3 @@
-# fn_academy/controllers/survey_certification.py
 from odoo import models, fields, api, tools, _
 from odoo.exceptions import (
     UserError, ValidationError, RedirectWarning,
@@ -17,67 +16,56 @@ _logger = logging.getLogger(__name__)
 
 class Survey(SurveyController):
     """
-    Extend the native Survey controller to route certification PDFs
-    to different reports depending on survey.certification_report_layout.
+    Extend native survey controller to choose the report
+    based on survey.certification_report_layout:
 
     - 'firenor-one_seagreen' -> survey.certification_report
     - 'fni-ack_o-ack'        -> fn_academy.hr_emp_ack_report
     """
 
     # -------------------------------------------------------------------------
-    # Internal helpers
+    # Helper to pick the right report
     # -------------------------------------------------------------------------
     def _get_certification_report_ref(self, user_input):
-        """
-        Decide which ir.actions.report xmlid to use for this survey attempt.
-        """
         survey = user_input.survey_id
         layout = survey.certification_report_layout or 'firenor-one_seagreen'
 
-        # Default: stock certificate report (Firenor layout via your override)
         report_ref = 'survey.certification_report'
-
-        # HR Employee Acknowledgement layout -> custom report
         if layout == 'fni-ack_o-ack':
-            # From custom_survey_reports.xml: <record id="hr_emp_ack_report" ...>
+            # from custom_survey_reports.xml
             report_ref = 'fn_academy.hr_emp_ack_report'
-
         return report_ref
 
+    # -------------------------------------------------------------------------
+    # OVERRIDE: core _generate_report
+    # -------------------------------------------------------------------------
     def _generate_report(self, user_input, download=True):
-        """
-        Override the native _generate_report to use the layout-aware report.
-
-        This is used by both:
-        - Preview  (/survey/<survey>/get_certification_preview)
-        - Download (/survey/<int:survey_id>/get_certification)
-        """
+        """Generate certification PDF according to survey layout."""
         report_ref = self._get_certification_report_ref(user_input)
-        pdf_content = b''
+        pdf_content = b""
 
         try:
-            report_model = request.env['ir.actions.report'].sudo()
-            pdf_content, _ = report_model._render_qweb_pdf(
-                report_ref,
-                [user_input.id],
-                data={'report_type': 'pdf'},
-            )
-
-        except MissingError:
-            # Custom report xmlid not found -> fall back to stock report
-            _logger.exception(
-                "Certification report %s not found, falling back to "
-                "survey.certification_report",
-                report_ref,
-            )
-            pdf_content, _ = request.env['ir.actions.report'].sudo()._render_qweb_pdf(
-                'survey.certification_report',
-                [user_input.id],
-                data={'report_type': 'pdf'},
-            )
+            report_model = request.env["ir.actions.report"].sudo()
+            # Inner try: handle MissingError and fallback
+            try:
+                pdf_content, _ = report_model._render_qweb_pdf(
+                    report_ref,
+                    [user_input.id],
+                    data={'report_type': 'pdf'},
+                )
+            except MissingError:
+                _logger.exception(
+                    "Certification report %s not found, falling back to "
+                    "survey.certification_report",
+                    report_ref,
+                )
+                pdf_content, _ = request.env["ir.actions.report"].sudo()._render_qweb_pdf(
+                    'survey.certification_report',
+                    [user_input.id],
+                    data={'report_type': 'pdf'},
+                )
 
         except Exception as exc:
-            # Any other error -> user-friendly message + full log
             _logger.exception(
                 "Error generating certification report %s for user_input %s: %s",
                 report_ref,
@@ -94,7 +82,6 @@ class Survey(SurveyController):
         else:
             disposition = content_disposition('Certification.pdf')
             if not download:
-                # Show in browser instead of download
                 parts = disposition.split(';')
                 parts[0] = 'inline'
                 disposition = ';'.join(parts)
@@ -117,16 +104,10 @@ class Survey(SurveyController):
             )
 
     # -------------------------------------------------------------------------
-    # Routes: override native ones, keep same URL/auth via @http.route()
+    # OVERRIDE: Preview route (backend)
     # -------------------------------------------------------------------------
     @http.route()
     def survey_get_certification_preview(self, survey, **kwargs):
-        """
-        Preview button in backend Survey form.
-
-        Route is inherited from core (same URL/auth), but we now call our
-        layout-aware _generate_report().
-        """
         if not request.env.user.has_group('survey.group_survey_user'):
             raise werkzeug.exceptions.Forbidden()
 
@@ -143,13 +124,11 @@ class Survey(SurveyController):
 
         return response
 
+    # -------------------------------------------------------------------------
+    # OVERRIDE: Download route (website)
+    # -------------------------------------------------------------------------
     @http.route()
     def survey_get_certification(self, survey_id, **kwargs):
-        """
-        Download certification button on website (front-end).
-
-        Same access logic as core, but final PDF is layout-aware.
-        """
         survey = request.env['survey.survey'].sudo().search(
             [
                 ('id', '=', survey_id),
@@ -159,7 +138,6 @@ class Survey(SurveyController):
         )
 
         if not survey:
-            # No certification survey found -> home
             return request.redirect("/")
 
         succeeded_attempt = request.env['survey.user_input'].sudo().search(
