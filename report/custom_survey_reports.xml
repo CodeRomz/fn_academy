@@ -7,7 +7,7 @@
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">survey.certification_report_view</field>
             <field name="print_report_name">'Certification - %s - %s - %s' % (object.survey_id.display_name,
-                object.partner_id.name, object.create_date.strftime('%Y-%m-%d'))
+                object.partner_id.name, object.create_date.strftime('%d-%b-%Y'))
             </field>
             <field name="binding_model_id" ref="survey.model_survey_user_input"/>
             <field name="binding_type">report</field>
@@ -34,7 +34,7 @@
             <field name="model">survey.user_input</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">fn_academy.hr_emp_ack_report_view</field>
-            <field name="print_report_name">'Acknowledgement - %s - %s' % (object.partner_id.name, object.create_date.strftime('%Y-%m-%d'))
+            <field name="print_report_name">'Acknowledgement - %s - %s' % (object.partner_id.name, object.create_date.strftime('%d-%b-%Y'))
             </field>
             <field name="paperformat_id" ref="paperformat_hr_emp_ack"/>
             <field name="binding_model_id" ref="survey.model_survey_user_input"/>

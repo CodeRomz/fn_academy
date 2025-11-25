@@ -48,9 +48,12 @@
 
                                 .header-left {
                                 border-left: 1px solid #47a5ae;
-                                margin-top: 15px;
                                 padding-left: 8px;
                                 width: 70%;
+                                }
+
+                                .header-left > table {
+                                margin-top: 10px;
                                 }
 
                                 .header-right {
@@ -58,6 +61,7 @@
                                 text-align: right;
                                 width: 30%;
                                 }
+
 
                             </style>
 
@@ -85,7 +89,7 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="header-right" >
+                                    <div class="header-right">
                                         <img t-if="res_company.logo"
                                              t-att-src="image_data_uri(res_company.logo)"
                                              alt="Company Logo"
