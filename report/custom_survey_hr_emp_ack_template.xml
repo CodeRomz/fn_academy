@@ -59,7 +59,7 @@
                                         <img t-if="res_company.logo"
                                              t-att-src="image_data_uri(res_company.logo)"
                                              alt="Company Logo"
-                                             style="max-height: 130px; max-width: 100%;"
+                                             style="max-height: 150px; max-width: 100%;"
                                         />
                                     </div>
                                 </div>
