@@ -68,7 +68,7 @@
                                 width: 30%;
                                 }
 
-                                .article, .certification-wrapper, .fni-ack, .o-ack {
+                                .fni-ack, .o-ack {
                                 background-color: #ffffff !important;
                                 width: 21cm !important;
                                 min-height: 29.7cm !important;
