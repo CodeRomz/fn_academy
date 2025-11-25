@@ -32,7 +32,7 @@
                             </style>
 
                             <div class="page container fn_font .ack-page">
-                                <div class="row align-items-center mb-5" style="border-left: 2px solid #47a5ae !important;">
+                                <div class="row d-flex align-items-center mb-5" style="border-left: 2px solid #47a5ae !important;">
                                     <div class="col-6">
                                         <table class="table table-sm table-borderless">
                                             <tr>
@@ -59,11 +59,11 @@
                                         <img t-if="res_company.logo"
                                              t-att-src="image_data_uri(res_company.logo)"
                                              alt="Company Logo"
-                                             style="max-height: 200px; max-width: 100%;"
+                                             style="max-height: 130px; max-width: 100%;"
                                         />
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row mt-2">
                                     <div class="col">
                                         <h6>
                                             Employee Receipt and Acceptance
