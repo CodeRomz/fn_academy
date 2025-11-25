@@ -69,20 +69,13 @@
                                 width: 30%;
                                 }
 
-                                .article.certification-wrapper.fni-ack.o-ack {
+                                .article, .certification-wrapper, .fni-ack, .o-ack {
                                 background-color: #ffffff !important;
                                 width: 21cm !important;
                                 min-height: 29.7cm !important;
                                 margin: 0 !important;
-                                padding: 0 !important;
+                                padding: 20mm 20mm 20mm 20mm !important;
                                 }
-
-
-                                .article.certification-wrapper.fni-ack.o-ack .page.container.fn_font.ack-page {
-                                margin: 0 !important;
-                                padding: 20mm 20mm 20mm 20mm;
-                                }
-
                             </style>
 
 
