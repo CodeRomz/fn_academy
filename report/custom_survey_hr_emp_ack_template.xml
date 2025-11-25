@@ -70,21 +70,19 @@
                                 }
 
                                 /* Apply only when this survey uses fni-ack_o-ack layout */
+
                                 .article.certification-wrapper.fni-ack.o-ack {
                                 background-color: #ffffff !important;
-
-                                /* A4 portrait content box (inside the PDF page) */
                                 width: 21cm !important;
                                 min-height: 29.7cm !important;
-
-                                margin: 0 !important; /* no outer margin */
+                                margin: 0 !important;
                                 padding: 0 !important;
                                 }
 
                                 /* Control the inner content margins (visual margins on the page) */
                                 .article.certification-wrapper.fni-ack.o-ack .page.container.fn_font.ack-page {
                                 margin: 0 !important;
-                                padding: 20mm 20mm 20mm 20mm; /* tweak as needed */
+                                padding: 20mm 20mm 20mm 20mm;
                                 }
 
                             </style>
