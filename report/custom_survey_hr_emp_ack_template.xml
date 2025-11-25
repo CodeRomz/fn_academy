@@ -69,7 +69,7 @@
                                 width: 30%;
                                 }
 
-                                .fni-ack, o-ack{
+                                .fni-ack, .o-ack{
                                 background-color: #ffffff !important;
                                 width: 29.7cm !important;
                                 height: 21cm !important;
