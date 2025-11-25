@@ -44,23 +44,20 @@
                                 .header-left {
                                 border-left: 1px solid #47a5ae;
                                 padding-right: 8px;
+                                width: 60%;
                                 }
 
                                 .header-right {
                                 border-left: 1px solid #47a5ae;
                                 text-align: right;
+                                width: 40%;
                                 }
 
-                                .header-row .col-8,
-                                .header-row .col-4{
-                                display: table-cell;
-                                vertical-align: middle;
-                                }
                             </style>
 
                             <div class="page container fn_font ack-page">
                                 <div class="header-row mb-5">
-                                    <div class="col-8 header-left">
+                                    <div class="header-left">
                                         <table class="table table-sm table-borderless">
                                             <tr>
                                                 <td class="td-width-110">Doc. Title:</td>
@@ -82,7 +79,7 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="col-4 header-right" >
+                                    <div class="header-right" >
                                         <img t-if="res_company.logo"
                                              t-att-src="image_data_uri(res_company.logo)"
                                              alt="Company Logo"
