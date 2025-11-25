@@ -49,7 +49,7 @@
                             <div class="page container fn_font ack-page">
                                 <div class="row header-row">
                                     <div class="col-8" style="border-left: 1px solid #47a5ae !important;">
-                                        <table class="table table-sm table-borderless mt-2">
+                                        <table class="table table-sm table-borderless">
                                             <tr>
                                                 <td class="td-width-110">Doc. Title:</td>
                                                 <td>
@@ -78,7 +78,8 @@
                                         />
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+
+                                <div class="row mt-4">
                                     <div class="col">
                                         <h6>
                                             Employee Receipt and Acceptance
