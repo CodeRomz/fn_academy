@@ -69,19 +69,28 @@
                                 width: 30%;
                                 }
 
-                                .fni-ack, .o-ack{
+                                /* Apply only when this survey uses fni-ack_o-ack layout */
+                                .article.certification-wrapper.fni-ack.o-ack {
                                 background-color: #ffffff !important;
-                                width: 29.7cm !important;
-                                height: 21cm !important;
-                                margin: 30 !important;
+
+                                /* A4 portrait content box (inside the PDF page) */
+                                width: 21cm !important;
+                                min-height: 29.7cm !important;
+
+                                margin: 0 !important; /* no outer margin */
+                                padding: 0 !important;
+                                }
+
+                                /* Control the inner content margins (visual margins on the page) */
+                                .article.certification-wrapper.fni-ack.o-ack .page.container.fn_font.ack-page {
+                                margin: 0 !important;
+                                padding: 20mm 20mm 20mm 20mm; /* tweak as needed */
                                 }
 
                             </style>
 
 
-                            <div t-attf-class="#{'page container fn_font ack-page' + layout_template + ' ' + layout_color}">
-
-
+                            <div t-attf-class="#{'page container fn_font ack-page ' + layout_template + ' ' + layout_color}">
                                 <div class="header-row mb-5">
                                     <div class="header-left">
                                         <table class="table table-sm table-borderless">
