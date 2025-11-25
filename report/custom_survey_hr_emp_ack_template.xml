@@ -73,13 +73,13 @@
                                 background-color: #ffffff !important;
                                 width: 29.7cm !important;
                                 height: 21cm !important;
-                                margin: 10 !important;
+                                margin: 30 !important;
                                 }
 
                             </style>
 
 
-                            <div t-attf-class="#{'age container fn_font ack-page' + layout_template + ' ' + layout_color}">
+                            <div t-attf-class="#{'page container fn_font ack-page' + layout_template + ' ' + layout_color}">
 
 
                                 <div class="header-row mb-5">
