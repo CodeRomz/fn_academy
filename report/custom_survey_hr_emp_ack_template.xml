@@ -74,7 +74,7 @@
                                 width: 21cm !important;
                                 min-height: 29.7cm !important;
                                 margin: 0 !important;
-                                padding: 20mm 20mm 20mm 20mm !important;
+                                padding: 5mm 5mm 5mm 5mm !important;
                                 }
                             </style>
 
