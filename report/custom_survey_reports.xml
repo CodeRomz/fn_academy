@@ -33,7 +33,7 @@
             <field name="name">HR Employee Acknowledgement</field>
             <field name="model">survey.user_input</field>
             <field name="report_type">qweb-pdf</field>
-            <field name="report_name">survey.hr_emp_ack_report_view</field>
+            <field name="report_name">fn_academy.hr_emp_ack_report_view</field>
             <field name="print_report_name">'Acknowledgement - %s - %s' % (object.partner_id.name, object.create_date.strftime('%d-%b-%Y'))
             </field>
             <field name="paperformat_id" ref="paperformat_hr_emp_ack"/>
