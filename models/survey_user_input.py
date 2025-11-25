@@ -11,4 +11,5 @@ class SurveyUserInput(models.Model):
         "Certificate Image",
         max_width=1920,
         max_height=1080,  # Define maximum dimensions for storage
+
     )
