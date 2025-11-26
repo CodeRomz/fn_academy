@@ -83,7 +83,7 @@
                                          style="max-height: 150px; max-width: 100%;"
                                     />-->
 
-                                    <img src="fn_academy/static/img/Logo-RGB-VI-Margin.png" style="max-height: 150px; max-width: 100%;"/>
+                                    <img src="/fn_academy/static/img/Logo-RGB-VI-Margin.png" style="max-height: 150px; max-width: 100%;"/>
                                 </div>
                             </div>
 
