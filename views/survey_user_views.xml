@@ -1,0 +1,12 @@
+<odoo>
+    <record id="survey_user_input_view_form_inherit" model="ir.ui.view">
+        <field name="name">survey.user_input.view.form.inherit</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="survey.survey_user_input_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='access_token']" position="after">
+                <field name="certificate_image" widget="image" class="oe_avatar" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

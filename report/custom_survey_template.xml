@@ -3,6 +3,7 @@
         <xpath expr="." position="replace">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="user_input">
+                    <!-- Certification Layout -->
                     <t t-set="layout_values"
                        t-value="user_input.survey_id.certification_report_layout.split('_') if user_input.survey_id.certification_report_layout else ['not', 'thing']"/>
                     <t t-set="layout_template" t-value="layout_values[0]"/>
@@ -13,69 +14,78 @@
                         <style>
                             @font-face {
                             font-family: 'Square721BT';
-                            src: url('/fn_academy/static/src/fonts/square_721_bt.ttf') format('truetype');
+                            src: url('/fn_academy/static/fonts/square_721_bt.ttf') format('truetype');
                             font-weight: normal;
                             font-style: normal;
                             }
-                            .fn_font{
-                            font-family: 'Square721BT', sans-serif !important;
+                            .fn_font {
+                            font-family: 'Square721BT' !important;
                             }
-                            .firenor-one{
+                            .firenor-one {
                             background-color: #ffffff !important;
                             background: url(/fn_academy/static/img/firenor-one_seagreen.png);
                             background-size: cover;
                             text-align: center;
+                            overflow: hidden;
                             }
                         </style>
-                        <div t-attf-class="#{'container h-100 justify-content-center align-items-center' + layout_template + ' ' + layout_color}">
-                            <div class="row mt-5 pt-4 mb-1">
+
+                        <div t-attf-class="#{'container h-100 justify-content-center align-items-center ' + layout_template + ' ' + layout_color}">
+                            <div class="row mt-5 pt-5 mb-1 fn_font">
                                 <div class="col-12 mt-5 pt-5">
-                                    <h1 class="fn_font my-1 py-1" style="text-transform: uppercase !important;">
+                                    <h1 class="my-1 py-1" style="text-transform: uppercase !important;">
                                         Certificate
                                         <span t-if="user_input.scoring_success">of Achievement</span>
                                     </h1>
                                 </div>
                             </div>
-                            <div class="row mt-1 pt-1">
-                                <div class="col-12  mt-1 pt-1">
-                                    <p class="mt-4 pt-5">This certificate is presented to</p>
+                            <div class="row mt-1 mb-3 pt-1 fn_font">
+                                <div class="col-12 mt-4 pt-4">
+                                    <p class="mt-1 pt-1">This certificate is presented to</p>
                                 </div>
                             </div>
-                            <div class="row mb-2">
+                            <div class="row mt-5 mb-1 fn_font">
                                 <div class="col-12">
                                     <h1>
                                         <t t-esc="user_input.partner_id.name or user_input.email"/>
                                     </h1>
                                 </div>
-
                             </div>
-                            <div class="row px-5 mx-5 mt-5">
+                            <div class="row px-5 mx-5 mt-5 fn_font">
                                 <div class="col-12 px-5 my-1">
-                                    <p class="fn_font mx-2" t-if="user_input.scoring_success">For successfully
-                                        completing
-                                        <em>
-                                            <t t-esc="user_input.survey_id.display_name"/>
-                                        </em>
-                                        .<br/>Your dedication, perseverance,
-                                        and hard work have not only earned you this certification but also reflect your
-                                        commitment to excellence. Your efforts have made a meaningful impact, and we are
-                                        incredibly proud of your achievement. This accomplishment demonstrates your
-                                        ability to rise to challenges and excel, and we look forward to witnessing your
-                                        continued success in future endeavors.
+                                    <p class="mx-2" t-if="user_input.scoring_success">
+                                        For successfully completing
+                                        <t t-esc="user_input.survey_id.display_name"/>.
+                                        <br/>
+                                        Your dedication, perseverance, and hard work have not only earned you this
+                                        certification but also reflect your commitment to excellence. This
+                                        accomplishment demonstrates your ability to rise to challenges and excel, and we
+                                        look forward to witnessing your continued success in future endeavors.
                                     </p>
-                                    <p class="mx-1" t-else=" ">for taking the
-                                        <em>
-                                            <t t-esc="user_input.survey_id.display_name"/>
-                                        </em>
-                                        course.
+                                    <p class="mx-1" t-else=" ">
+                                        For taking the<t t-esc="user_input.survey_id.display_name"/>.
+                                        <br/>
+                                        Your dedication, perseverance, and hard work have not only earned you this
+                                        certification but also reflect your commitment to excellence. This
+                                        accomplishment demonstrates your ability to rise to challenges and excel, and we
+                                        look forward to witnessing your continued success in future endeavors.
                                     </p>
                                 </div>
                             </div>
 
-                            <div class="row m-5 p-4" t-if="user_input.scoring_success">
-                                <div class="col-12 mt-3 pt-3 px-5" style="text-align: right">
-                                    <p class="m-1" style="border-top: 1px solid white !important;">Certification n°
+                            <div class="row m-5 p-4 fn_font" t-if="user_input.scoring_success"
+                                 style="text-align: left !important;">
+                                <div class="col-8">
+                                    <p></p>
+                                </div>
+                                <div class="col-4">
+                                    <p style="border-top: 48px solid rgba(255,255,255,0) !important;">
+                                        Certification n°
                                         <span t-out="str('FNA')+str(user_input.id).rjust(10, '0')"/>
+                                        <br/>
+                                        <span>Date:
+                                            <t t-esc="user_input.create_date.strftime('%d-%b-%Y')"/>
+                                        </span>
                                     </p>
                                 </div>
                             </div>

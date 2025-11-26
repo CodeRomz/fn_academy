@@ -15,25 +15,18 @@
     'version': '18.0.1.0.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['survey'],
+    'depends': ['website', 'survey'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        # 'views/views.xml',
-        # 'report/report.xml',
+        'security/ir.model.access.csv',
+        'security/fn_acad_security_rules.xml',
         'views/res_users.xml',
+        'views/survey_user_views.xml',
         'report/custom_survey_template.xml',
+        'report/custom_survey_reports.xml',
+        'report/custom_survey_hr_emp_ack_template.xml',
     ],
     'installable': True,
     'application': True,
-
-    'web.report_assets_common': [
-        'fn_academy/static/src/scss/survey_reports_custom.scss',
-    ],
-
-    'web.assets_frontend': [
-        'fn_academy/static/src/scss/survey_reports_custom.scss',
-    ],
-
 }
